@@ -238,3 +238,5 @@ CM8 connection details:
 	- ICMREMOTEDB=\<remote DB\> e.g. icmnlsdb
 
 **Note: To avoid runtime errors on Windows, hosts file may need to be updated with the CM8 server name and IP address.** 
+
+NEXT: [Installing UIE](./enterprise-search/installing-uie.md) 

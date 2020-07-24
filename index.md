@@ -15,6 +15,8 @@ Unity solution connects your business application users with multiple repositori
 
 [Prerequisites](./enterprise-search/prerequisites.md) 
 
+[Installing UIE](./enterprise-search/installing-uie.md) 
+
 ## Other 
 
 **Containers**

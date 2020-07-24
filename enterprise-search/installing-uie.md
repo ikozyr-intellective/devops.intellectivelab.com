@@ -9,7 +9,7 @@
 [Install Discovery Services](./installing-uie.html#install-discovery-services)  
 - [Setup UIE Crawler](./installing-uie.html#setup-uie-crawler)  
 - [Install UIE Crawlers](./installing-uie.html#install-uie-crawlers) 
-	- [FileNet CE 5.2 crawler](./installing-uie.html#filenet-ce-5.2-crawler) 
+	- [FileNet CE 5.2 crawler](./installing-uie.html#filenet-ce-52-crawler) 
 	- [CMIS Alfresco crawler](./installing-uie.html#cmis-alfresco-crawler) 
 	- [Box crawler](./installing-uie.html#box-crawler) 
 	- [CMOD crawler](./installing-uie.html#cmod-crawler) 
