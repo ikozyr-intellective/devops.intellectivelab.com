@@ -68,7 +68,7 @@ Each Solr installation zip file contains a complete Solr platform package. To in
 	
 - Stop the Solr server using `Ctrl+C` on the Command Prompt
 - Start the Solr server again using the command `solr start` 
-- Verify the Solr server has started successfully by going to Solr Admin using `http://<servername>:<port>/solr`, by default is [http://localhost:8983/solr](http://localhost:8983/solr) 
+- Verify the Solr server has started successfully by going to Solr Admin using `http://<servername>:<port>/solr`, by default [http://localhost:8983/solr](http://localhost:8983/solr) 
 
 	![uie-folder](.\images\image20.png) 
 	
@@ -132,7 +132,7 @@ Add the following specifically for CMOD crawler:
 
 	![uie-folder](.\images\image25.png) 
 	
-- Open browser and go to URL `http://<server>:<port>/uie/discovery`, by default is [http://localhost:8080/uie/discovery](http://localhost:8080/uie/discovery)  
+- Open browser and go to URL `http://<server>:<port>/uie/discovery`, by default [http://localhost:8080/uie/discovery](http://localhost:8080/uie/discovery)  
 
 - Enter default username `admin` and password (provided by request) 
 
@@ -171,7 +171,7 @@ Add the following specifically for CMOD crawler:
 	
 - Click `Detail View` to verify the number of documents crawled and whether the crawlpoint is updated
 - Stop the crawler by clicking `Stop`, after a few minutes of running
-- To verify that CE5.2 index is created, login to Solr admin page using `http://<servername>:<port>/solr`, by default is [http://localhost:8983/solr](http://localhost:8983/solr) 
+- To verify that CE5.2 index is created, login to Solr admin page using `http://<servername>:<port>/solr`, by default [http://localhost:8983/solr](http://localhost:8983/solr) 
 - From the Core Selector drop-down, select your SODemo core, then select `Query` to open the Query page 
 
 	![uie-folder](.\images\image32.png) 
@@ -205,7 +205,7 @@ Add the following specifically for CMOD crawler:
 	
 - Click `Detail View` to verify the number of documents crawled and whether the crawlpoint is updated
 - Stop the crawler by clicking `Stop`, after a few minutes of running
-- To verify that CE5.2 index is created, login to Solr admin page using `http://<servername>:<port>/solr`, by default is [http://localhost:8983/solr](http://localhost:8983/solr) 
+- To verify that CE5.2 index is created, login to Solr admin page using `http://<servername>:<port>/solr`, by default [http://localhost:8983/solr](http://localhost:8983/solr) 
 - From the Core Selector drop-down, select your SODemo core, then select `Query` to open the Query page 
 
 	![uie-folder](.\images\image32.png) 
@@ -248,7 +248,7 @@ Add the following specifically for CMOD crawler:
 	
 - Click `Detail View` to verify the number of documents crawled and whether the crawlpoint is updated
 - Stop the crawler by clicking `Stop`, after a few minutes of running
-- To verify that CE5.2 index is created, login to Solr admin page using `http://<servername>:<port>/solr`, by default is [http://localhost:8983/solr](http://localhost:8983/solr) 
+- To verify that CE5.2 index is created, login to Solr admin page using `http://<servername>:<port>/solr`, by default [http://localhost:8983/solr](http://localhost:8983/solr) 
 - From the Core Selector drop-down, select your SODemo core, then select `Query` to open the Query page 
 
 	![uie-folder](.\images\image32.png) 
@@ -283,7 +283,7 @@ Add the following specifically for CMOD crawler:
 	
 - Click `Detail View` to verify the number of documents crawled and whether the crawlpoint is updated
 - Stop the crawler by clicking `Stop`, after a few minutes of running
-- To verify that CE5.2 index is created, login to Solr admin page using `http://<servername>:<port>/solr`, by default is [http://localhost:8983/solr](http://localhost:8983/solr) 
+- To verify that CE5.2 index is created, login to Solr admin page using `http://<servername>:<port>/solr`, by default [http://localhost:8983/solr](http://localhost:8983/solr) 
 - From the Core Selector drop-down, select your SODemo core, then select `Query` to open the Query page 
 
 	![uie-folder](.\images\image32.png) 
@@ -324,7 +324,7 @@ Add the following specifically for CMOD crawler:
 	
 - Click `Detail View` to verify the number of documents crawled and whether the crawlpoint is updated
 - Stop the crawler by clicking `Stop`, after a few minutes of running
-- To verify that CE5.2 index is created, login to Solr admin page using `http://<servername>:<port>/solr`, by default is [http://localhost:8983/solr](http://localhost:8983/solr) 
+- To verify that CE5.2 index is created, login to Solr admin page using `http://<servername>:<port>/solr`, by default [http://localhost:8983/solr](http://localhost:8983/solr) 
 - From the Core Selector drop-down, select your SODemo core, then select `Query` to open the Query page 
 
 	![uie-folder](.\images\image32.png) 
@@ -333,18 +333,104 @@ Add the following specifically for CMOD crawler:
 - Search for the `numFound` value and verify it equals the number of documents that should have been indexed by the crawler 
 
 	![uie-folder](.\images\image33.png) 
-
-
-	
-	
-	
 	
 ### Update UIE Crawlers 
 
+If crawler configuration file is updated, it needs to be uploaded for the crawler and crawler service should be restarted
+- Stop the crawler for which the configuration needs to be updated
+- Click `Edit`
+
+	![uie-folder](.\images\image45.png) 
+
+- Browse and upload the new configuration file and start the service again
+
+	![uie-folder](.\images\image46.png) 
+
 ## Install Search Services 
 
-### Install UIE Searcher on IBM WewbSphere 
+### Install UIE Searcher on IBM WebSphere 
 
+- Extract the uie-search folder from the UIE installation package to a folder on the server 
+
+	![uie-folder](.\images\image47.png) 
+	
+- Edit `searcher-SOLR-sample.xml` file under `/uie-search/samples/config/solr` folder
+- Update the following properties to match the specific environment and save the file
+	- IndexGroup > ID = SODemo
+	- IndexManager > url = `http://<servername>:<port>/solr/SODemo`
+	- Property > name=”defaultIndexGroup” = SODemo 
+	
+	![uie-folder](.\images\image48.png) 
+	
+	![uie-folder](.\images\image49.png)  
+	
+- Open WebSphere admin console `https://<servername>:<port>/ibm/console/logon.jsp`, by default [https://localhost:9043/ibm/console/logon.jsp](https://localhost:9043/ibm/console/logon.jsp) 
+- Go to `Applications > Application Type > WebSphere enterprise applications`
+- Click `Install` button
+- Click `Browse` button and locate `uie-search-web.war` package under `/uie-search/packages/solr8/war` folder 
+
+	![uie-folder](.\images\image50.png)  
+	
+	![uie-folder](.\images\image51.png) 
+	
+- Click `Next` button
+- Select `Fast Path` and click `Next` button 
+
+	![uie-folder](.\images\image52.png) 
+
+- Adjust Application name if needed and click `Next` button
+
+	![uie-folder](.\images\image53.png) 
+	
+- Click `Next` button on `Map modules to servers` window 
+
+	![uie-folder](.\images\image54.png) 
+	
+- Press `Next` button on `Map virtual hosts for Web modules` window
+
+	![uie-folder](.\images\image55.png) 
+	
+- Set Context root and click `Next` button on `Map context roots for Web modules` 
+
+	![uie-folder](.\images\image56.png) 
+
+- Click `Finish` button on Summary page 
+
+	![uie-folder](.\images\image57.png) 
+	
+- Click `Save` link
+	
+	![uie-folder](.\images\image58.png) 
+	
+- Click the installed application 
+- Go to `Environment entries for Web modules` link 
+
+	![uie-folder](.\images\image59.png) 
+	
+- Set path to configuration file (`configPath` value). Configuration file path example: 
+
+	Linux - [file:///opt/configs/UIE/searcher/searcher-config-linux.xml](file:///opt/configs/UIE/searcher/searcher-config-linux.xml) 
+
+	Windows - [file:///C:/Intellective/UIE/config/searcher-SOLR-config.xml](file:///C:/Intellective/UIE/config/searcher-SOLR-config.xml) 
+
+	![uie-folder](.\images\image60.png) 
+
+
+	![uie-folder](.\images\image61.png) 
+	
+- Click `OK` button 
+- Click `Save` link 
+	
+	![uie-folder](.\images\image62.png) 
+	
+- Select installed application and click `Start` button
+	
+	![uie-folder](.\images\image63.png) 
+	
+- In browser, open URL `http://<servername>:<port>/uie-searcher`, by default [http://localhost:9080/uie-searcher](http://localhost:9080/uie-searcher) and verify that no errors shown, UIE version and other application data is displayed
+	
+	![uie-folder](.\images\image64.png) 
+		
 ### Install UIE Searcher on IBM WebSphere Liberty 
 
 ### Install UIE Searcher on WebLogic 
