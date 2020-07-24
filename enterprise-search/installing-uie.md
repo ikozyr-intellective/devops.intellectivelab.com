@@ -34,11 +34,11 @@ It can use to implement full-text search, faceted search, and real-time indexing
 
 Each Solr installation zip file contains a complete Solr platform package. To install it, simply extract the files from the zip. 
 
-- Create a folder on the installation server \<solr_install\>: 
+- Create a folder on the installation server `<solr_install>`: 
 
 	![uie-folder](.\images\image11.png) 
 	
-- Extract all files from the downloaded zip (e.g. solr-8.5.1.zip) to the \<solr_install\> folder: 
+- Extract all files from the downloaded zip (e.g. solr-8.5.1.zip) to the `<solr_install>` folder: 
 
 	![uie-folder](.\images\image12.png) 
 	
@@ -56,7 +56,7 @@ Each Solr installation zip file contains a complete Solr platform package. To in
 
 	![uie-folder](.\images\image16.png) 
 	
-- Verify that SODemo folder is created under \<solr_install\>: 
+- Verify that `SODemo` folder is created under `<solr_install>`: 
 
 	![uie-folder](.\images\image17.png) 
 	
@@ -76,7 +76,7 @@ Each Solr installation zip file contains a complete Solr platform package. To in
 
 	![uie-folder](.\images\image21.png) 
 	
-**Note: For case-insensitive and wildcard searches in UIE, below settings should be included in managed-schema of the Solr core. Documents need to be recrawled after making this change.** 
+**Note**: For case-insensitive and wildcard searches in UIE, settings below should be included in `managed-schema` of the Solr core. 
 
 ```
 <fieldType name="text_ws" class="solr.TextField" positionIncrementGap="100">
@@ -96,9 +96,7 @@ Map the `metadataa_s` field to repository index fields that will be used for sea
   <copyField source="d_classu_namea_s" dest="metadataa_s"/>
   <copyField source="d_repositoryu_ida_s" dest="metadataa_s"/>
 ```
-
-
-	
+Documents need to be recrawled after making this change. 
 
 ### Install Lucene 
 
@@ -114,7 +112,7 @@ Apache Lucene™ is a high-performance, full-featured text search engine library
 
 	![uie-folder](.\images\image22.png) 
 	
-- Locate `run-crawler.cmd` batch script under the uie-crawl installation folder and open it in edit mode. 
+- Locate `run-crawler.cmd` batch script under the `uie-crawl` installation folder and open it in edit mode. 
 Check that it points to correct java installation. 
 Add the following specifically for CMOD crawler:  
 
@@ -124,7 +122,7 @@ Add the following specifically for CMOD crawler:
 
 	![uie-folder](.\images\image23.png) 
 	
-- Open `application.properties` file which contains the web interface ports, the administrator credentials, the embedded DB settings etc. and adjust settings if required  
+- Open `application.properties` file which contains the web interface ports, the administrator credentials, the embedded DB settings etc. and adjust settings if required:  
 
 	![uie-folder](.\images\image24.png) 
 	
@@ -138,7 +136,7 @@ Add the following specifically for CMOD crawler:
 
 	![uie-folder](.\images\image26.png) 
 	
-**Note: After installing crawlers for the first time, it is a good idea to restart UIE discovery crawler services.** 
+**Note**: After installing crawlers for the first time, it is a good idea to restart UIE discovery crawler services. 
 
 ### Install UIE Crawlers 
 
@@ -146,7 +144,7 @@ Add the following specifically for CMOD crawler:
 
 - Edit `crawler_CE52_SOLR8_MSSQL_Demo.xml` file under `/uie-crawl/samples/config/ce52/solr8` folder (assuming that CE 5.2 is using MSSQL server as the database) 
 
-- Update the following properties to match the specific environment and save the file
+- Update the following properties to match the specific environment and save the file:
 	- IndexManager > url = `http://<servername>:<port>/solr/SODemo` 
 	- AgentLockPersistence > local folder path 
 	- Database and FileNet settings to be updated as per the prerequisites mentioned above: 
@@ -155,11 +153,11 @@ Add the following specifically for CMOD crawler:
 	![uie-folder](.\images\image28.png) 
 	
 - In the UIE discovery services admin console, click `Add Service`
-- Enter a Service Name and Description: 
+- Enter `Service Name` and `Description`: 
 
 	![uie-folder](.\images\image29.png) 
 	
-- Under Service configuration file, select the following file under `/uie-crawl/samples/config/ce52/solr8` folder: `crawler_CE52_SOLR8_MSSQL_Demo.xml` 
+- Under `Service configuration file`, select `crawler_CE52_SOLR8_MSSQL_Demo.xml` file under `/uie-crawl/samples/config/ce52/solr8` folder  
 - Click `Submit` 
 - To start crawler, click the `Start` button 
 
@@ -176,7 +174,7 @@ Add the following specifically for CMOD crawler:
 
 	![uie-folder](.\images\image32.png) 
 	
-- In the Request-Handler (qt) field, enter the following default query, and click `Execute Query: /select`
+- In the `Request-Handler (qt)` field, enter the following default query, and click `Execute Query: /select`
 - Search for the `numFound` value and verify it equals the number of documents that should have been indexed by the crawler 
 
 	![uie-folder](.\images\image33.png) 
@@ -184,10 +182,12 @@ Add the following specifically for CMOD crawler:
 #### CMIS Alfresco crawler 
 
 - Edit `crawler_SOLR8_MainRepository.xml` file under `/uie-crawl/samples/config/cmis10/solr8` folder
-- Update the following properties to match the specific environment and save the file
+- Update the following properties to match the specific environment and save the file:
 	- IndexManager > url = `http://<servername>:<port>/solr/SODemo`
 	- AgentLockPersistence > local folder path
 	- CMIS settings to be updated as per the prerequisites mentioned above: 
+	
+	![uie-folder](.\images\image27.png) 
 	
 	![uie-folder](.\images\image34.png) 
 	
@@ -205,7 +205,7 @@ Add the following specifically for CMOD crawler:
 	
 - Click `Detail View` to verify the number of documents crawled and whether the crawlpoint is updated
 - Stop the crawler by clicking `Stop`, after a few minutes of running
-- To verify that CE5.2 index is created, login to Solr admin page using `http://<servername>:<port>/solr`, by default [http://localhost:8983/solr](http://localhost:8983/solr) 
+- To verify that index is created, login to Solr admin page using `http://<servername>:<port>/solr`, by default [http://localhost:8983/solr](http://localhost:8983/solr) 
 - From the Core Selector drop-down, select your SODemo core, then select `Query` to open the Query page 
 
 	![uie-folder](.\images\image32.png) 
@@ -217,15 +217,14 @@ Add the following specifically for CMOD crawler:
 	
 #### Box crawler 
 
-- If Java 8 is used for crawler, below steps are required
+- If Java 8 is used for crawler, steps below are required
 	- Edit `%JAVA_HOME%/jre/lib/security/java.security` by adding `security.provider.nn=org.bouncycastle.jce.provider.BouncyCastleProvider`:
 
 	![uie-folder](.\images\image36.png) 
 
 	- Copy `bcprov-jdk15on-1.x.jar` and `bcpkix-jdk15on-1.x.jar` files from `/uie-crawl/plugins/uie-plugin-box-7.6.1.X` folder to `%JAVA_HOME%/jre/lib/ext` 
 - Edit `crawler_Box_SOLR8.xml` file under `/uie-crawl/samples/config/box/solr8` folder
-- Update the following properties to match the specific environment and save the file
-
+- Update the following properties to match the specific environment and save the file: 
 	- IndexManager > url = `http://<servername>:<port>/solr/SODemo`
 	- AgentLockPersistence > local folder path
 	- Box settings to be updated as per the prerequisites mentioned above: 
@@ -248,7 +247,7 @@ Add the following specifically for CMOD crawler:
 	
 - Click `Detail View` to verify the number of documents crawled and whether the crawlpoint is updated
 - Stop the crawler by clicking `Stop`, after a few minutes of running
-- To verify that CE5.2 index is created, login to Solr admin page using `http://<servername>:<port>/solr`, by default [http://localhost:8983/solr](http://localhost:8983/solr) 
+- To verify that index is created, login to Solr admin page using `http://<servername>:<port>/solr`, by default [http://localhost:8983/solr](http://localhost:8983/solr) 
 - From the Core Selector drop-down, select your SODemo core, then select `Query` to open the Query page 
 
 	![uie-folder](.\images\image32.png) 
@@ -261,8 +260,7 @@ Add the following specifically for CMOD crawler:
 #### CMOD crawler 
 
 - Edit `crawler_CMOD_SOLR8_AdobePDF.xml` file under `/uie-crawl/samples/config/cmod/solr8` folder
-- Update the following properties to match the specific environment and save the file
-
+- Update the following properties to match the specific environment and save the file: 
 	- IndexManager > url = `http://<servername>:<port>/solr/SODemo`
 	- AgentLockPersistence > local folder path
 	- CMOD settings to be updated as per the prerequisites mentioned above: 
@@ -283,7 +281,7 @@ Add the following specifically for CMOD crawler:
 	
 - Click `Detail View` to verify the number of documents crawled and whether the crawlpoint is updated
 - Stop the crawler by clicking `Stop`, after a few minutes of running
-- To verify that CE5.2 index is created, login to Solr admin page using `http://<servername>:<port>/solr`, by default [http://localhost:8983/solr](http://localhost:8983/solr) 
+- To verify that index is created, login to Solr admin page using `http://<servername>:<port>/solr`, by default [http://localhost:8983/solr](http://localhost:8983/solr) 
 - From the Core Selector drop-down, select your SODemo core, then select `Query` to open the Query page 
 
 	![uie-folder](.\images\image32.png) 
@@ -295,15 +293,14 @@ Add the following specifically for CMOD crawler:
 	
 #### CM8 crawler 
 
-- Move `cmbicmsdk81-8.6.0.jar` and uie-plugin-cm8-7.6.1.x.jar from uie-crawl/plugins/uie-plugin-cm8-7.6.1.x folder to /uie-crawl/ext folder
-- Copy cmbicmsrvs.ini from under /uie-crawl/samples/config/cm8/solr8 folder to the path specified in the CM8 crawler config
+- Move `cmbicmsdk81-8.6.0.jar` and `uie-plugin-cm8-7.6.1.x.jar` from `uie-crawl/plugins/uie-plugin-cm8-7.6.1.x` folder to `/uie-crawl/ext` folder
+- Copy `cmbicmsrvs.ini` under `/uie-crawl/samples/config/cm8/solr8` folder to the path specified in the CM8 crawler config
 - Edit and update the CM8 server properties to match the specific environment and save the file
 
 	![uie-folder](.\images\image42.png) 
 	
 - Edit `crawler_CM8_SOLR8_cm8db07.xml` file under `/uie-crawl/samples/config/cm8/solr8` folder
 - Update the following properties to match the specific environment and save the file: 
-
 	- IndexManager > url = `http://<servername>:<port>/solr/SODemo`
 	- AgentLockPersistence > local folder path
 	- CM8 settings to be updated as per the prerequisites mentioned above 
@@ -324,7 +321,7 @@ Add the following specifically for CMOD crawler:
 	
 - Click `Detail View` to verify the number of documents crawled and whether the crawlpoint is updated
 - Stop the crawler by clicking `Stop`, after a few minutes of running
-- To verify that CE5.2 index is created, login to Solr admin page using `http://<servername>:<port>/solr`, by default [http://localhost:8983/solr](http://localhost:8983/solr) 
+- To verify that index is created, login to Solr admin page using `http://<servername>:<port>/solr`, by default [http://localhost:8983/solr](http://localhost:8983/solr) 
 - From the Core Selector drop-down, select your SODemo core, then select `Query` to open the Query page 
 
 	![uie-folder](.\images\image32.png) 
@@ -342,7 +339,7 @@ If crawler configuration file is updated, it needs to be uploaded for the crawle
 
 	![uie-folder](.\images\image45.png) 
 
-- Browse and upload the new configuration file and start the service again
+- Browse and upload the new configuration file and start the service again: 
 
 	![uie-folder](.\images\image46.png) 
 
@@ -350,12 +347,12 @@ If crawler configuration file is updated, it needs to be uploaded for the crawle
 
 ### Install UIE Searcher on IBM WebSphere 
 
-- Extract the uie-search folder from the UIE installation package to a folder on the server 
+- Extract the `uie-search` folder from the UIE installation package to a folder on the server: 
 
 	![uie-folder](.\images\image47.png) 
 	
 - Edit `searcher-SOLR-sample.xml` file under `/uie-search/samples/config/solr` folder
-- Update the following properties to match the specific environment and save the file
+- Update the following properties to match the specific environment and save the file: 
 	- IndexGroup > ID = SODemo
 	- IndexManager > url = `http://<servername>:<port>/solr/SODemo`
 	- Property > name=”defaultIndexGroup” = SODemo 
@@ -394,7 +391,7 @@ If crawler configuration file is updated, it needs to be uploaded for the crawle
 
 	![uie-folder](.\images\image56.png) 
 
-- Click `Finish` button on Summary page 
+- Click `Finish` button on `Summary` page 
 
 	![uie-folder](.\images\image57.png) 
 	
@@ -427,7 +424,7 @@ If crawler configuration file is updated, it needs to be uploaded for the crawle
 	
 	![uie-folder](.\images\image63.png) 
 	
-- In browser, open URL `http://<servername>:<port>/uie-searcher`, by default [http://localhost:9080/uie-searcher](http://localhost:9080/uie-searcher) and verify that no errors shown, UIE version and other application data is displayed
+- In browser, open URL `http://<servername>:<port>/uie-searcher`, by default [http://localhost:9080/uie-searcher](http://localhost:9080/uie-searcher) and verify that no errors shown, UIE version and other application data is displayed: 
 	
 	![uie-folder](.\images\image64.png) 
 		
