@@ -78,7 +78,7 @@ Each Solr installation zip file contains a complete Solr platform package. To in
 	
 **Note**: For case-insensitive and wildcard searches in UIE, settings below should be included in `managed-schema` of the Solr core. 
 
-```
+```xml 
 <fieldType name="text_ws" class="solr.TextField" positionIncrementGap="100">
     <analyzer>
       <tokenizer class="solr.WhitespaceTokenizerFactory"/>
@@ -91,7 +91,7 @@ Each Solr installation zip file contains a complete Solr platform package. To in
 
 Map the `metadataa_s` field to repository index fields that will be used for searching. For example: 
 
-```
+```xml 
   <copyField source="d_titlea_s" dest="metadataa_s"/>
   <copyField source="d_classu_namea_s" dest="metadataa_s"/>
   <copyField source="d_repositoryu_ida_s" dest="metadataa_s"/>
