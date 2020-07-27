@@ -146,7 +146,7 @@ Verify all required database JDBC providers are configured in WebSphere:
 		
 - Restart WebSphere 
 
-#### Configure Datasource and Connector 
+### Configure Datasource and Connector 
 
 - Login to Unity `http://<servername>:<port>/<contextroot>`, by default [http://localhost:9080/vu](http://localhost:9080/vu) using admin username, password is available by request
 - Go to Configuration Console tab and `Global > System > Connectors` and create a UIE connector: 
@@ -227,7 +227,7 @@ Verify all required database JDBC providers are configured in WebSphere:
 		</ViewerProperties>
 		``` 
 		
-#### Configure	Content Lists 
+### Configure	Content Lists 
 
 
 	
@@ -253,10 +253,6 @@ Verify all required database JDBC providers are configured in WebSphere:
 
 
 
-
-### Configure Datasource and Connector 
-
-### Configure Content Lists 
 
 ### Configure Search Template 
 
