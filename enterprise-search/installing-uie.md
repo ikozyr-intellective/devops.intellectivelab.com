@@ -420,7 +420,7 @@ If crawler configuration file is updated, it needs to be uploaded for the crawle
 	
 	![uie-folder](.\images\image62.png) 
 	
-- Select installed application and click `Start` button
+- Select installed application and click `Start` button 
 	
 	![uie-folder](.\images\image63.png) 
 	
