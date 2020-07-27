@@ -169,9 +169,9 @@ Verify all required database JDBC providers are configured in WebSphere:
 
 	![uie-folder](.\images\image86.png) 
 	
-**Note**: Index group need to be added from XML configuration once the connector is created under `<RepositoryDataProvider ID="uie_provider">` node as shown below and should match exactly with the one configured in crawler configurations: 
+	**Note**: Index group need to be added from XML configuration once the connector is created under `<RepositoryDataProvider ID="uie_provider">` node as shown below and should match exactly with the one configured in crawler configurations: 
 	
-![uie-folder](.\images\image87.png) 
+	![uie-folder](.\images\image87.png) 
 	
 - On Custom section tab, add two new sections: 
  
