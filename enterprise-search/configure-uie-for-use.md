@@ -25,8 +25,7 @@
 Solr and Crawler scripts can be installed as Windows services. To install these as services, download [NSSM](https://nssm.cc/download) and extract files to a folder. 
 **Note**: Do not delete `nssm.exe`, since it will be used when services need to be uninstalled in the future. 
 
-Install Solr as a service:
-
+To install Solr as a service: 
 - In Command Prompt, go to the folder where `nssm.exe` is located (e.g `C:\Program Files\nssm\win64\nssm`) and type `nssm install solr-8.5.1` 
 
 - Select the path to the `solr.cmd` folder and enter the arguments as shown: 
@@ -37,17 +36,17 @@ Install Solr as a service:
 
 	![uie-folder](.\images\image66.png) 
 
-Install Crawler as a service
+To install Crawler as a service: 
 - In Command Prompt, go to the folder where `nssm.exe` is located (e.g `C:\Program Files\nssm\win64\nssm`) and type `nssm install crawler-7.6.1`
 - Select the path to the `run-crawler.cmd` folder:
 	
 	![uie-folder](.\images\image67.png) 
 	
-- On Details tab, enter the below information and click `Install service`:
+- On Details tab, enter the information below and click `Install service`:
 	
 	![uie-folder](.\images\image68.png) 
 	
-- Verify that the services have been installed in Windows Services:
+- Verify that the services have been installed in Windows Services: 
 	
 	![uie-folder](.\images\image69.png) 
 	
