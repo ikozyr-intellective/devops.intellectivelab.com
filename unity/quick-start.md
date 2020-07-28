@@ -1,10 +1,22 @@
-# DevOps Documentation Site
+# Quick Start
 
-## Quick Start
 To try Unity demo version [install Docker](./how-to-install-docker.md) and configure Unity Docker image. 
-### Configure Unity Docker Image
 
-**Configuration**
+## Contents ## 
+
+[Configure Unity Docker Image](./quick-start.html#configure-unity-docker-image) 
+- [Configuration](./quick-start.html#configuration) 
+- [Access the Unity](./quick-start.html#access-the-unity) 
+
+[Unity Interface](./quick-start.html#unity-interface) 
+- [Tabs](./quick-start.html#tabs) 
+- [Search Layout](./quick-start.html#search-layout) 
+- [Case Management - Case View](./quick-start.html#case-management-case-view) 
+- [Case Management - Task View](./quick-start.html#case-management-task-view) 
+
+## Configure Unity Docker Image
+ 
+### Configuration ###
 
 - Create folder on the drive you shared to store Open Liberty & Unity configuration files, `C:\DockerUnity` for example 
 - [Download](link-to-server.zip) Unity package, unpack and place files to folder you created 
@@ -26,7 +38,7 @@ If not then it will be downloaded automatically.
 For the first time, it will take some time to download the image.
 Once downloaded, the local Unity instance will be up & running. 
 
-**Access the Unity**
+### Access the Unity ### 
 
 - Connect to Intellective VPN
 - Make sure the FileNet environment is up and accessible, hit [here](http://172.31.27.3:9080/wsi/FNCEWS40MTOM/) to confirm.
@@ -39,9 +51,9 @@ Once downloaded, the local Unity instance will be up & running.
 Wizard should guide you through establishing connection to FileNet, use the [endpoint](http://172.31.27.3:9080/wsi/FNCEWS40MTOM/) to connect to Filenet. 
 Welcome to Unity! 
 	
-### Unity interface ### 
+## Unity interface ## 
 
-**Tabs**
+### Tabs ### 
 
 Tabs are the main building block of Unity user interface. 
 
@@ -52,7 +64,7 @@ Access roles can be used to provide different groups of users with specific set 
 
 ![Search layout](.\images\quick-start\unity-ui-1-updated.png) 
 
-**Search Layout**
+### Search Layout ### 
 
 You will find on every search page: 
 
@@ -62,7 +74,7 @@ You will find on every search page:
 
 ![Actions](.\images\quick-start\unity-ui-2-updated-2.png) 
 
-**Case Management - Case View** 
+### Case Management - Case View ###
 
 ![Case Views](.\images\quick-start\unity-ui-7-updated.png)
 
@@ -70,7 +82,7 @@ You will find on every search page:
 - Documents tab in case details shows all documents associated w/ case
 - History/Comments tab will display history & comments associated w/ case 
 
-**Case Management - Task View** 
+### Case Management - Task View ### 
 
 ![Case Views](.\images\quick-start\unity-ui-8-updated.png) 
 
