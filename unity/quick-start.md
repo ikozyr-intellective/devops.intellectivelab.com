@@ -11,8 +11,8 @@ To try Unity demo version [install Docker](./how-to-install-docker.md) and confi
 [Unity Interface](./quick-start.html#unity-interface) 
 - [Tabs](./quick-start.html#tabs) 
 - [Search Layout](./quick-start.html#search-layout) 
-- [Case Management - Case View](./quick-start.html#case-management-case-view) 
-- [Case Management - Task View](./quick-start.html#case-management-task-view) 
+- [Case Management - Case View](./quick-start.html#case-management---case-view) 
+- [Case Management - Task View](./quick-start.html#case-management---task-view) 
 
 ## Configure Unity Docker Image
  
