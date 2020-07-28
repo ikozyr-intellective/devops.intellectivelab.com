@@ -104,6 +104,8 @@ Apache Lucene™ is a high-performance, full-featured text search engine library
 
 [Lucene](https://lucene.apache.org/core/documentation.html) 
 
+*Content should be added* 
+
 ## Install Discovery Services  
 
 ### Setup UIE Crawler 
@@ -430,9 +432,16 @@ If crawler configuration file is updated, it needs to be uploaded for the crawle
 		
 ### Install UIE Searcher on IBM WebSphere Liberty 
 
+*Content should be added* 
+
 ### Install UIE Searcher on WebLogic 
 
+*Content should be added* 
+
 ### Install UIE Searcher on WildFly JBoss 
+
+*Content should be added* 
+
 
 
 

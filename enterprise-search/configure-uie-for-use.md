@@ -59,6 +59,8 @@ To remove Solr and Crawler services:
 
 #### Linux 
 
+*Content should be added* 
+
 ### Clear UIE Solr Index 
 
 If there is a need to re-crawl the repositories after an index schema change, first clear the Solr index using the instructions in this section, then run the crawler again as discussed in the previous section.
@@ -229,37 +231,69 @@ Verify all required database JDBC providers are configured in WebSphere:
 		
 ### Configure	Content Lists 
 
-
+- Go to Configuration Console tab and `Global > User Interface > Content Lists` and create a new content list: 
 	
-	![uie-folder](.\images\image89.png)
-	![uie-folder](.\images\image90.png)
-	![uie-folder](.\images\image91.png)
-	![uie-folder](.\images\image92.png)
-	![uie-folder](.\images\image93.png)
-	![uie-folder](.\images\image94.png)
-	![uie-folder](.\images\image95.png)
-	![uie-folder](.\images\image96.png)
-	![uie-folder](.\images\image97.png)
-	![uie-folder](.\images\image98.png)
-	![uie-folder](.\images\image99.png)
-	![uie-folder](.\images\image100.png)
-	![uie-folder](.\images\image101.png)
-	![uie-folder](.\images\image102.png)
+	![uie-folder](.\images\image89.png) 
 	
-
-
-
-
-
-
-
-
+- On Define column sets tab, create default and all column sets with fields as shown below: 
+	
+	![uie-folder](.\images\image90.png) 
+	
+- On Add toolbar actions tab, add the toolbars as shown below: 
+	
+	![uie-folder](.\images\image91.png) 
+	
+- On Define listeners tab, add the listeners as shown below: 
+	
+	![uie-folder](.\images\image92.png) 
+	
 ### Configure Search Template 
 
+- Go to Configuration Console tab and `Global > User Interface > Search Templates` and create a new search template: 
+	
+	![uie-folder](.\images\image93.png) 
+	
+- On Define search criteria tab, enter the criteria as shown below: 
+	
+	![uie-folder](.\images\image94.png) 
+	
+- On Define operation tab, enter the information as shown below: 
+	
+	![uie-folder](.\images\image95.png) 
+	
 ### Configure Tab and assign Search Template 
 
+- Go to Configuration Console tab and `Global > User Interface > Tabs` and create a new tab: 
+	
+	![uie-folder](.\images\image96.png) 
+	
+- On Assign search template tab, enter the information as shown below: 
+	
+	![uie-folder](.\images\image97.png) 
+	
+- On Content List, select the appropriate grid as shown below: 
+	
+	![uie-folder](.\images\image98.png) 
+	
+- On Define security, select Unity Users group as shown below: 
+	
+	![uie-folder](.\images\image99.png) 
+	
 ### UIE Search Test 
 
+- Login to Unity using `http://<servername>:<port>/<context-root>`, by default [http://localhost:9080/vu](http://localhost:9080/vu) 
+- Enter some search criteria and click search:  
+	
+	![uie-folder](.\images\image100.png) 
+	
+	![uie-folder](.\images\image101.png) 
+	
+	![uie-folder](.\images\image102.png) 
+
 ## Crawler configuration XML 
+
+Crawlers use configuration XML which can be modified to crawl specific types of entities, e.g. documents. The table below lists all the tag names, usage, value and description of all the tags used in the XML: 
+[https://confluence.intellective.com/display/PRODUCTxDOCUMENTATIONxVUx6x16xDRAFT/VU+Configuration+XML+Reference](https://confluence.intellective.com/display/PRODUCTxDOCUMENTATIONxVUx6x16xDRAFT/VU+Configuration+XML+Reference)
+
 
 
