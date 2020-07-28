@@ -295,5 +295,15 @@ Verify all required database JDBC providers are configured in WebSphere:
 Crawlers use configuration XML which can be modified to crawl specific types of entities, e.g. documents. The table below lists all the tag names, usage, value and description of all the tags used in the XML: 
 [https://confluence.intellective.com/display/PRODUCTxDOCUMENTATIONxVUx6x16xDRAFT/VU+Configuration+XML+Reference](https://confluence.intellective.com/display/PRODUCTxDOCUMENTATIONxVUx6x16xDRAFT/VU+Configuration+XML+Reference)
 
+|       Tag Nam      | Value | Crawler Usage | Description |
+|:------------------:|:-----:|:-------------:|:-----------:|
+| <GetPropertiesSQL> |       | CE 5.2, ...   |             |
+|      <JobSQL>      |       | CE 5.2, ...   |             |
+| <DocumentCheckSQL> |       | CE 5.2, ...   |             |
+|                    |       |               |             |
+
+*Content should be added* 
+
+
 
 
