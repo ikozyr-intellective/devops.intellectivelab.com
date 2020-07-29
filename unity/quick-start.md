@@ -57,7 +57,7 @@ Welcome to Unity!
 
 Tabs are the main building block of Unity user interface. 
 
-- Tabs used to represent Folder View, Case Views, Searche Templates, Workbaskets, Analytics and Configuration Console 
+- Tabs used to represent Folder View, Case Views, Search Templates, Workbaskets, Analytics and Configuration Console 
 - Tabs also used to provide additional information like Properties, Documents, Security, etc inside of case and document details  
 	
 Access roles can be used to provide different groups of users with specific set of tabs to tailor different functionality to different groups/departments. 

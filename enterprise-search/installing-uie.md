@@ -68,7 +68,7 @@ Each Solr installation zip file contains a complete Solr platform package. To in
 	
 - Stop the Solr server using `Ctrl+C` on the Command Prompt
 - Start the Solr server again using the command `solr start` 
-- Verify the Solr server has started successfully by going to Solr Admin using `http://<servername>:<port>/solr`, by default [http://localhost:8983/solr](http://localhost:8983/solr) 
+- Verify the Solr server has started successfully by going to Solr Admin using `http://<servername>:<port>/solr`, by default [http://localhost:8983/solr](http://localhost:8983/solr): 
 
 	![uie-folder](.\images\image20.png) 
 	
@@ -134,7 +134,7 @@ Add the following specifically for CMOD crawler:
 	
 - Open browser and go to URL `http://<server>:<port>/uie/discovery`, by default [http://localhost:8080/uie/discovery](http://localhost:8080/uie/discovery)  
 
-- Enter default username `admin` and password (provided by request) 
+- Enter default username `admin` and default password:  
 
 	![uie-folder](.\images\image26.png) 
 	
@@ -161,7 +161,7 @@ Add the following specifically for CMOD crawler:
 	
 - Under `Service configuration file`, select `crawler_CE52_SOLR8_MSSQL_Demo.xml` file under `/uie-crawl/samples/config/ce52/solr8` folder  
 - Click `Submit` 
-- To start crawler, click the `Start` button 
+- To start crawler, click the `Start` button: 
 
 	![uie-folder](.\images\image30.png) 
 	
@@ -172,12 +172,12 @@ Add the following specifically for CMOD crawler:
 - Click `Detail View` to verify the number of documents crawled and whether the crawlpoint is updated
 - Stop the crawler by clicking `Stop`, after a few minutes of running
 - To verify that CE5.2 index is created, login to Solr admin page using `http://<servername>:<port>/solr`, by default [http://localhost:8983/solr](http://localhost:8983/solr) 
-- From the Core Selector drop-down, select your SODemo core, then select `Query` to open the Query page 
+- From the Core Selector drop-down, select your SODemo core, then select `Query` to open the Query page:  
 
 	![uie-folder](.\images\image32.png) 
 	
 - In the `Request-Handler (qt)` field, enter the following default query, and click `Execute Query: /select`
-- Search for the `numFound` value and verify it equals the number of documents that should have been indexed by the crawler 
+- Search for the `numFound` value and verify it equals the number of documents that should have been indexed by the crawler: 
 
 	![uie-folder](.\images\image33.png) 
 	
@@ -193,11 +193,11 @@ Add the following specifically for CMOD crawler:
 	
 	![uie-folder](.\images\image34.png) 
 	
-- In the UIE discovery services admin console, click `Add Service` and use the above config file to add a new crawler service
+- In the UIE discovery services admin console, click `Add Service` and use the above config file to add a new crawler service: 
 
 	![uie-folder](.\images\image35.png) 
 	
-- To start crawler, click the `Start` button 
+- To start crawler, click the `Start` button:  
 
 	![uie-folder](.\images\image30.png) 
 	
@@ -208,12 +208,12 @@ Add the following specifically for CMOD crawler:
 - Click `Detail View` to verify the number of documents crawled and whether the crawlpoint is updated
 - Stop the crawler by clicking `Stop`, after a few minutes of running
 - To verify that index is created, login to Solr admin page using `http://<servername>:<port>/solr`, by default [http://localhost:8983/solr](http://localhost:8983/solr) 
-- From the Core Selector drop-down, select your SODemo core, then select `Query` to open the Query page 
+- From the Core Selector drop-down, select your SODemo core, then select `Query` to open the Query page:  
 
 	![uie-folder](.\images\image32.png) 
 	
 - In the Request-Handler (qt) field, enter the following default query, and click `Execute Query: /select`
-- Search for the `numFound` value and verify it equals the number of documents that should have been indexed by the crawler 
+- Search for the `numFound` value and verify it equals the number of documents that should have been indexed by the crawler:  
 
 	![uie-folder](.\images\image33.png) 
 	
@@ -221,8 +221,8 @@ Add the following specifically for CMOD crawler:
 
 - If Java 8 is used for crawler, steps below are required
 	- Edit `%JAVA_HOME%/jre/lib/security/java.security` by adding `security.provider.nn=org.bouncycastle.jce.provider.BouncyCastleProvider`:
-
-	![uie-folder](.\images\image36.png) 
+	
+		![uie-folder](.\images\image36.png) 
 
 	- Copy `bcprov-jdk15on-1.x.jar` and `bcpkix-jdk15on-1.x.jar` files from `/uie-crawl/plugins/uie-plugin-box-7.6.1.X` folder to `%JAVA_HOME%/jre/lib/ext` 
 - Edit `crawler_Box_SOLR8.xml` file under `/uie-crawl/samples/config/box/solr8` folder
@@ -231,15 +231,15 @@ Add the following specifically for CMOD crawler:
 	- AgentLockPersistence > local folder path
 	- Box settings to be updated as per the prerequisites mentioned above: 
 	
-	![uie-folder](.\images\image37.png) 
+		![uie-folder](.\images\image37.png) 
 	
-	![uie-folder](.\images\image38.png) 
+		![uie-folder](.\images\image38.png) 
 	
-- In the UIE discovery services admin console, click `Add Service` and use the above config file to add a new crawler service
+- In the UIE discovery services admin console, click `Add Service` and use the above config file to add a new crawler service: 
 
 	![uie-folder](.\images\image39.png) 
 	
-- To start crawler, click the `Start` button 
+- To start crawler, click the `Start` button:  
 
 	![uie-folder](.\images\image30.png) 
 	
@@ -250,12 +250,12 @@ Add the following specifically for CMOD crawler:
 - Click `Detail View` to verify the number of documents crawled and whether the crawlpoint is updated
 - Stop the crawler by clicking `Stop`, after a few minutes of running
 - To verify that index is created, login to Solr admin page using `http://<servername>:<port>/solr`, by default [http://localhost:8983/solr](http://localhost:8983/solr) 
-- From the Core Selector drop-down, select your SODemo core, then select `Query` to open the Query page 
+- From the Core Selector drop-down, select your SODemo core, then select `Query` to open the Query page:  
 
 	![uie-folder](.\images\image32.png) 
 	
 - In the Request-Handler (qt) field, enter the following default query, and click `Execute Query: /select`
-- Search for the `numFound` value and verify it equals the number of documents that should have been indexed by the crawler 
+- Search for the `numFound` value and verify it equals the number of documents that should have been indexed by the crawler:  
 
 	![uie-folder](.\images\image33.png) 
 	
@@ -269,11 +269,11 @@ Add the following specifically for CMOD crawler:
 
 	![uie-folder](.\images\image40.png) 
 	
-- In the UIE discovery services admin console, click `Add Service` and use the above config file to add a new crawler service
+- In the UIE discovery services admin console, click `Add Service` and use the above config file to add a new crawler service: 
 
 	![uie-folder](.\images\image41.png) 
 	
-- To start crawler, click the `Start` button 
+- To start crawler, click the `Start` button:  
 
 	![uie-folder](.\images\image30.png) 
 	
@@ -284,12 +284,12 @@ Add the following specifically for CMOD crawler:
 - Click `Detail View` to verify the number of documents crawled and whether the crawlpoint is updated
 - Stop the crawler by clicking `Stop`, after a few minutes of running
 - To verify that index is created, login to Solr admin page using `http://<servername>:<port>/solr`, by default [http://localhost:8983/solr](http://localhost:8983/solr) 
-- From the Core Selector drop-down, select your SODemo core, then select `Query` to open the Query page 
+- From the Core Selector drop-down, select your SODemo core, then select `Query` to open the Query page:  
 
 	![uie-folder](.\images\image32.png) 
 	
 - In the Request-Handler (qt) field, enter the following default query, and click `Execute Query: /select`
-- Search for the `numFound` value and verify it equals the number of documents that should have been indexed by the crawler 
+- Search for the `numFound` value and verify it equals the number of documents that should have been indexed by the crawler:  
 
 	![uie-folder](.\images\image33.png) 
 	
@@ -297,7 +297,7 @@ Add the following specifically for CMOD crawler:
 
 - Move `cmbicmsdk81-8.6.0.jar` and `uie-plugin-cm8-7.6.1.x.jar` from `uie-crawl/plugins/uie-plugin-cm8-7.6.1.x` folder to `/uie-crawl/ext` folder
 - Copy `cmbicmsrvs.ini` under `/uie-crawl/samples/config/cm8/solr8` folder to the path specified in the CM8 crawler config
-- Edit and update the CM8 server properties to match the specific environment and save the file
+- Edit and update the CM8 server properties to match the specific environment and save the file: 
 
 	![uie-folder](.\images\image42.png) 
 	
@@ -305,7 +305,7 @@ Add the following specifically for CMOD crawler:
 - Update the following properties to match the specific environment and save the file: 
 	- IndexManager > url = `http://<servername>:<port>/solr/SODemo`
 	- AgentLockPersistence > local folder path
-	- CM8 settings to be updated as per the prerequisites mentioned above 
+	- CM8 settings to be updated as per the prerequisites mentioned above:  
 	
 	![uie-folder](.\images\image43.png) 
 	
@@ -313,7 +313,7 @@ Add the following specifically for CMOD crawler:
 
 	![uie-folder](.\images\image44.png) 
 	
-- To start crawler, click the `Start` button 
+- To start crawler, click the `Start` button:  
 
 	![uie-folder](.\images\image30.png) 
 	
@@ -324,12 +324,12 @@ Add the following specifically for CMOD crawler:
 - Click `Detail View` to verify the number of documents crawled and whether the crawlpoint is updated
 - Stop the crawler by clicking `Stop`, after a few minutes of running
 - To verify that index is created, login to Solr admin page using `http://<servername>:<port>/solr`, by default [http://localhost:8983/solr](http://localhost:8983/solr) 
-- From the Core Selector drop-down, select your SODemo core, then select `Query` to open the Query page 
+- From the Core Selector drop-down, select your SODemo core, then select `Query` to open the Query page:  
 
 	![uie-folder](.\images\image32.png) 
 	
 - In the Request-Handler (qt) field, enter the following default query, and click `Execute Query: /select`
-- Search for the `numFound` value and verify it equals the number of documents that should have been indexed by the crawler 
+- Search for the `numFound` value and verify it equals the number of documents that should have been indexed by the crawler:  
 
 	![uie-folder](.\images\image33.png) 
 	
@@ -337,7 +337,7 @@ Add the following specifically for CMOD crawler:
 
 If crawler configuration file is updated, it needs to be uploaded for the crawler and crawler service should be restarted
 - Stop the crawler for which the configuration needs to be updated
-- Click `Edit`
+- Click `Edit`: 
 
 	![uie-folder](.\images\image45.png) 
 
@@ -366,43 +366,43 @@ If crawler configuration file is updated, it needs to be uploaded for the crawle
 - Open WebSphere admin console `https://<servername>:<port>/ibm/console/logon.jsp`, by default [https://localhost:9043/ibm/console/logon.jsp](https://localhost:9043/ibm/console/logon.jsp) 
 - Go to `Applications > Application Type > WebSphere enterprise applications`
 - Click `Install` button
-- Click `Browse` button and locate `uie-search-web.war` package under `/uie-search/packages/solr8/war` folder 
+- Click `Browse` button and locate `uie-search-web.war` package under `/uie-search/packages/solr8/war` folder: 
 
 	![uie-folder](.\images\image50.png)  
 	
 	![uie-folder](.\images\image51.png) 
 	
 - Click `Next` button
-- Select `Fast Path` and click `Next` button 
+- Select `Fast Path` and click `Next` button:  
 
 	![uie-folder](.\images\image52.png) 
 
-- Adjust Application name if needed and click `Next` button
+- Adjust Application name if needed and click `Next` button: 
 
 	![uie-folder](.\images\image53.png) 
 	
-- Click `Next` button on `Map modules to servers` window 
+- Click `Next` button on `Map modules to servers` window:  
 
 	![uie-folder](.\images\image54.png) 
 	
-- Press `Next` button on `Map virtual hosts for Web modules` window
+- Press `Next` button on `Map virtual hosts for Web modules` window: 
 
 	![uie-folder](.\images\image55.png) 
 	
-- Set Context root and click `Next` button on `Map context roots for Web modules` 
+- Set Context root and click `Next` button on `Map context roots for Web modules`:  
 
 	![uie-folder](.\images\image56.png) 
 
-- Click `Finish` button on `Summary` page 
+- Click `Finish` button on `Summary` page:  
 
 	![uie-folder](.\images\image57.png) 
 	
-- Click `Save` link
+- Click `Save` link: 
 	
 	![uie-folder](.\images\image58.png) 
 	
 - Click the installed application 
-- Go to `Environment entries for Web modules` link 
+- Go to `Environment entries for Web modules` link:  
 
 	![uie-folder](.\images\image59.png) 
 	
@@ -418,11 +418,11 @@ If crawler configuration file is updated, it needs to be uploaded for the crawle
 	![uie-folder](.\images\image61.png) 
 	
 - Click `OK` button 
-- Click `Save` link 
+- Click `Save` link:  
 	
 	![uie-folder](.\images\image62.png) 
 	
-- Select installed application and click `Start` button 
+- Select installed application and click `Start` button:  
 	
 	![uie-folder](.\images\image63.png) 
 	
@@ -442,6 +442,9 @@ If crawler configuration file is updated, it needs to be uploaded for the crawle
 
 *Content should be added* 
 
+## Contacts
+
+[Contact Intellective](https://www.intellective.com/contact-us/) 
 
 
 
