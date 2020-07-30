@@ -14,6 +14,8 @@ Unity solution connects your business application users with multiple repositori
 [Hardware Requirements](./unity/unity-hardware-requirements.md) 
 
 [Software Requirements](./unity/unity-software-requirements.md) 
+
+[Unity for Salesforce](./unity-for-salesforce/unity-for-salesforce.md) 
 	
 ## Enterprise Search 
 
