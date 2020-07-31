@@ -20,8 +20,9 @@
 [Un-installing Unity for Salesforce](./unity-for-salesforce.html#un---installing-unity-for-salesforce) 
 - [Un-install UnityApp package](./unity-for-salesforce.html#un---install-unityapp-package) 
 
+## Planning Unity for Salesforce Installation
 
-## Review Prerequisites 
+### Review Prerequisites 
 
 - A new account should be created in the Salesforce Org where UnityApp will be installed
 - Link to install UnityApp in the Salesforce Org
@@ -29,7 +30,9 @@
 - Unity application should be configured with at least one search template to search documents in FileNet P8
 - Required certificates including intermediate certificates should be installed in WebSphere 
 
-## UnityApp for Salesforce Checklist 
+### UnityApp for Salesforce Checklist 
+
+Option 1
 
 |             Required Details             |                              Examples/Reference                                                                                                                  |
 |:----------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------:|
@@ -43,30 +46,148 @@
 | Unity for Salesforce configuration guide |                                                                                                                                                                  |
 |                                          |                                                                                                                                                                  |
 
+Option 2
 
-![u4sf](.\images\image2.png) 
-![u4sf](.\images\image3.png) 
-![u4sf](.\images\image4.png) 
-![u4sf](.\images\image5.png) 
-![u4sf](.\images\image6.png) 
-![u4sf](.\images\image7.png) 
-![u4sf](.\images\image8.png) 
-![u4sf](.\images\image9.png) 
-![u4sf](.\images\image10.png) 
-![u4sf](.\images\image11.png) 
-![u4sf](.\images\image12.png) 
-![u4sf](.\images\image13.png) 
-![u4sf](.\images\image14.png) 
-![u4sf](.\images\image15.png) 
-![u4sf](.\images\image16.png) 
-![u4sf](.\images\image17.png) 
-![u4sf](.\images\image18.png) 
-![u4sf](.\images\image19.png) 
-![u4sf](.\images\image20.png) 
-![u4sf](.\images\image21.png) 
-![u4sf](.\images\image22.png) 
-![u4sf](.\images\image23.png)  
-![u4sf](.\images\image24.png) 
+|             Required Details             |                              Examples/Reference                                                                                                                  |
+|:----------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| Salesforce Org URL                       | [https://intellective-demo-qa-dev-ed-dev-ed....](https://intellective-demo-qa-dev-ed-dev-ed.my.salesforce.com/)                                   |
+| Unity package (v2.2) install URL         | [https://login.salesforce.com/packaging/....](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tf4000004PtwA) |
+| Salesforce Admin Username                |                                                                                                                                                                  |
+| Salesforce Admin Password                |                                                                                                                                                                  |
+| WebSphere Server Certificates            |                                                                                                                                                                  |
+| Unity application URL                    | [https://sf-demo.vegaecm.com:9443/vu](https://sf-demo.vegaecm.com:9443/vu)                                                                                       |
+| Sample Unity application configuration   |     [unity-config.xml](link-to-unity-config.xml)                                                                                                                 |
+| Unity for Salesforce configuration guide | [https://vegaecm2com.sharepoint.com/....](https://vegaecm2com.sharepoint.com/productmanagement/Shared%20Documents/Product%20Documentation/Unity/Feature%20Guides/Unity%20Feature%20Guide%20-%20Salesforce%202.0.pdf#search=salesforce%20configuration)                                                                                                                                                                  |
+|                                          |                                                                                                                                                                  |
+
+### Install WebSphere Server Certificates 
+
+Salesforce requires SSL cert signed by proper CA. Note, that server TLS version has to be minimum 1.2, version 1.1 not supported by Salesforce anymore.
+
+[Reference](https://help.salesforce.com/articleView?id=000326722&type=1&mode=1) 
+
+> Salesforce trusts only root certificate authority (CA) certificates, with few historical exceptions. Salesforce's certificate trust policy is to require server and client certificate chains to include all intermediate certificates that exist between the server or client certificate and the chain's root certificate. Salesforce will not honor requests to add intermediate certificates to its trust list. Salesforce trusts many generally trusted root certificates, but not all.
+> To review a current list of supported certificates you can append `/cacerts.jsp` to any instance URL (Only Winter '19 Instances will work with this endpoint) - `https://INSTANCE.salesforce.com/cacerts.jsp` (replace `INSTANCE` with any Winter'19 upgraded instance), e.g. [https://cs32.salesforce.com/cacerts.jsp](https://cs32.salesforce.com/cacerts.jsp). 
+
+After certificate for a given Unity site is obtained it should be installed on application server . Please check the application server manual.
+
+### Verify Unity Application 
+
+- Login to Unity application using the appropriate URL: 
+
+	![u4sf](.\images\image2.png) 
+
+- Verify the Search Template in the tab. This search template tab will be displayed from within Salesforce: 
+
+	![u4sf](.\images\image3.png) 
+	
+- Verify the search results in the search template: 	
+	
+	![u4sf](.\images\image4.png) 
+
+## Installing Unity for Salesforce 
+
+### Install UnityApp package using link 
+
+- Verify the link available to install UnityApp is available for the Salesforce Org it is going to be installed to
+	Link for UnityApp version 2.2: [https://login.salesforce.com/packaging/installPackage.apexp?p0=04tf4000004PtwA](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tf4000004PtwA) 
+- Login screen as shown in screenshot below will appear. Enter the credentials (Username and Password for the Org (e.g. `intellective-demo-qa-dev-ed-dev-ed.my.salesforce.com`) the package should be installed on): 
+
+	![u4sf](.\images\image5.png) 
+	
+- Select Install for All Users and click `Install` button: 
+
+	![u4sf](.\images\image6.png) 
+	
+- Check `Yes, grant access to these third-party web sites` and click `Continue`: 
+	
+	![u4sf](.\images\image7.png) 
+	
+- Click `Done` when the installation is complete: 
+
+	![u4sf](.\images\image8.png) 
+	
+- On clicking `Done`, the page will be redirected to Installed Packages page with all installed packages: 
+	
+	![u4sf](.\images\image9.png) 
+
+### Package configuration in Salesforce 
+
+- Login to Salesforce
+- Click `Setup`
+
+	![u4sf](.\images\image10.png) 
+	
+- Go to `Users > User Management Settings`. Enable Enhanced Profile User Interface if not already enabled: 
+	
+	![u4sf](.\images\image11.png) 
+	
+- Go to `Users > Profiles` and click on `System Administrator`: 
+	
+	![u4sf](.\images\image12.png) 
+	
+- Click on `Assigned Apps`: 
+	
+	![u4sf](.\images\image13.png) 
+	
+- Click on `Edit` and check the Visible checkbox for “Unity for Salesforce”. Save the changes:
+	
+	![u4sf](.\images\image14.png) 
+	
+- Go to `Security > Session Settings`, uncheck “Enable secure and persistent browser caching to improve performance” in the Caching section and under “Extended use of IE11 with Lightning Experience” section check “I AGREE, Use IE11 with Lightning Experience during the Extended Period”. Click Save: 
+
+	![u4sf](.\images\image15.png) 
+	
+- Go to `Setup > My Domain`. If custom domain is already set skip this step, otherwise enter domain name, press `Check Availability` and `Register Domain` and then click `Deploy to Users` (if available):
+	
+	![u4sf](.\images\image16.png) 
+	
+- Go to `Identity > Auth. Providers`. Edit UnityOAuth2Provider if it exists, otherwise press `New` and select UnityOAuth2Provider in the Provider Type field: 
+	
+	![u4sf](.\images\image17.png) 
+	
+- Enter the following fields and click `Save`: 
+
+	*Table*
+	
+	![u4sf](.\images\image18.png) 
+	
+- Go to `Security > CSP Trusted Sites` and `Edit` Unity site name: 
+	
+	![u4sf](.\images\image19.png) 
+	
+- Enter the following fields and click `Save`: 
+
+	*Table* 
+	
+	![u4sf](.\images\image20.png) 
+	
+- Go to `Security > Remote Site Settings` and `Edit` Unity site name: 
+	
+	![u4sf](.\images\image21.png) 
+	
+- Enter the following fields and click `Save`: 
+
+	*Table* 
+	
+	![u4sf](.\images\image22.png) 
+	
+- Go to `Security > Named Credentials` and edit `vu_nc` if it exists or create a new Named Credential with the following information and click `Save`: 
+
+	*Table* 
+
+	![u4sf](.\images\image23.png)  
+	
+- Check that correct Unity application login dialog is opened and enter correct login and password
+
+- Open Unity for Salesforce app:
+
+	![u4sf](.\images\image24.png) 
+	
+### Configure Authentication between Salesforce and Unity 
+
+
+	
 ![u4sf](.\images\image25.png) 
 ![u4sf](.\images\image26.png) 
 ![u4sf](.\images\image27.png) 
