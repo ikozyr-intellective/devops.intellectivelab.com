@@ -29,7 +29,7 @@ To try Unity demo version [install Docker](./how-to-install-docker.md) and confi
 
 	You should get the message `Login Succeeded` 
 
-	![unity-cmd](.\images\quick-start\unity-installation-1.png) 
+	![unity-cmd](.\images\quick-start\image1.png) 
 	
 - Run `docker run -it -v c:/DockerUnity:/opt/vu  -p 9080:9080  --rm docker.devops.intellectivelab.com/unity-classic/unity-7:7.6.1-ol`, here `c:/DockerUnity` is a folder you copied Unity files 
 
@@ -62,7 +62,7 @@ Tabs are the main building block of Unity user interface.
 	
 Access roles can be used to provide different groups of users with specific set of tabs to tailor different functionality to different groups/departments. 
 
-![Search layout](.\images\quick-start\unity-ui-1-updated.png) 
+![Search layout](.\images\quick-start\image2.png) 
 
 ### Search Layout ### 
 
@@ -72,11 +72,11 @@ You will find on every search page:
 - Content List, where you view your search results 
 - Actions to work with documents from content list 
 
-![Actions](.\images\quick-start\unity-ui-2-updated-2.png) 
+![Actions](.\images\quick-start\image3.png) 
 
 ### Case Management - Case View ###
 
-![Case Views](.\images\quick-start\unity-ui-7-updated.png)
+![Case Views](.\images\quick-start\image4.png)
 
 - Case details allows user to perform actions on case
 - Documents tab in case details shows all documents associated w/ case
@@ -84,7 +84,7 @@ You will find on every search page:
 
 ### Case Management - Task View ### 
 
-![Case Views](.\images\quick-start\unity-ui-8-updated.png) 
+![Case Views](.\images\quick-start\image5.png) 
 
 - Task details allows user to perform actions defined in a workflow task
 - Documents tab shows all documents associated with a task

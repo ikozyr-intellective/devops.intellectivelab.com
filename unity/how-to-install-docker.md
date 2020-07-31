@@ -14,7 +14,7 @@
 - Open Command Prompt or PowerShell in admin mode 
 - Run `docker --version` or `docker run hello-world` to ensure you have a supported version of Docker 
 	
-	![cmd-docker-helloworld](.\images\docker\how-to-install-docker-3-updated.png) 
+	![cmd-docker-helloworld](.\images\docker\how-to-install-docker-3.png) 
 
 - After Docker desktop is installed, share the drive where you would place configuration files 
 	
@@ -24,7 +24,7 @@
 	
 	Go to *Resources->File sharing*, select `C` drive and click Apply&Restart button 
 	
-	![docker-settings](.\images\docker\how-to-install-docker-5-updated.png) 
+	![docker-settings](.\images\docker\how-to-install-docker-5.png) 
 	
 	Also you can verify and adjust Advanced settings accordingly 
 	
