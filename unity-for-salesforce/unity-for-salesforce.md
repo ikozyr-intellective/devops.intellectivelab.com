@@ -148,7 +148,20 @@ After certificate for a given Unity site is obtained it should be installed on a
 	
 - Enter the following fields and click `Save`: 
 
-	*Table*
+	|                  Field | Value                                     | Notes          |
+	|-----------------------:|:------------------------------------------|:---------------|
+	| Name                   | UnityOAuth2Provider                       |                |
+	| URL Suffix             | UnityOAuth2Provider                       |                |
+	| authorize-endpoint-url | callout:vu_nc/public/api/oauth/authorize  |see note below  |
+	| callback_url           | /services/authcallback/UnityOAuth2Provider|                |
+	| consumer_key           | unity_client                              |                |
+	| consumer_secret        | unity_secret                              |                |
+	| token_endpoint_url     | callout:vu_nc/public/api/oauth/token      |see note below  |
+	| user_info_endpoint_url | callout:vu_nc/public/api/userinfo         |see note below  |
+	| Registration Handler   | Select UnityOAuth2RegHandler              |                |
+	| Execute As             | Select current logged in admin user       |                | 
+
+	**Note**: `vu_nc` should match with Named Credentials. 
 	
 	![u4sf](.\images\image18.png) 
 	
@@ -158,7 +171,10 @@ After certificate for a given Unity site is obtained it should be installed on a
 	
 - Enter the following fields and click `Save`: 
 
-	*Table* 
+	|                  Field | Value                                     | Example                          |
+	|-----------------------:|:------------------------------------------|:---------------------------------|
+	| Trusted Site Name      | any unique name                           | Unity                            |
+	| URL Suffix             |`https://<Unity server>:<Unity port>`      | https://sf-demo.vegaecm.com:9443 |
 	
 	![u4sf](.\images\image20.png) 
 	
@@ -168,13 +184,26 @@ After certificate for a given Unity site is obtained it should be installed on a
 	
 - Enter the following fields and click `Save`: 
 
-	*Table* 
+	|                     Field | Value                                  | Example                          |
+	|--------------------------:|:---------------------------------------|:---------------------------------|
+	| Remote Site Name          | any unique name                        | Unity                            |
+	| Remote URL Site           |`https://<Unity server>:<Unity port>`   | https://sf-demo.vegaecm.com:9443 |
+	| Disable Protocol Security | checked                                |                                  |	
 	
 	![u4sf](.\images\image22.png) 
 	
 - Go to `Security > Named Credentials` and edit `vu_nc` if it exists or create a new Named Credential with the following information and click `Save`: 
 
-	*Table* 
+	|                             Field | Value                                                     | Example                             |
+	|----------------------------------:|:----------------------------------------------------------|:------------------------------------|
+	| Label                             | vu_nc/public/api/oauth/authorize                          |                                     |
+	| Name                              | vu_nc/public/api/oauth/authorize                          |                                     |
+	| URL                               | `https://<Unity server>:<Unity port>/<Unity_context_root>`| https://sf-demo.vegaecm.com:9443/vu |
+	| Identity Type                     | Per User                                                  |                                     |    
+	| Authentication Protocol           | OAuth 2.0                                                 |                                     |
+	| Authentication Provider           | UnityOAuth2Provider                                       |                                     |
+	| Scope                             | api                                                       |                                     |
+	| Start Authentication Flow on Save | checked                                                   |                                     |
 
 	![u4sf](.\images\image23.png)  
 	
@@ -186,27 +215,104 @@ After certificate for a given Unity site is obtained it should be installed on a
 	
 ### Configure Authentication between Salesforce and Unity 
 
+- Go to `Settings` under User profile: 
 
+	![u4sf](.\images\image25.png) 
 	
-![u4sf](.\images\image25.png) 
-![u4sf](.\images\image26.png) 
-![u4sf](.\images\image27.png) 
-![u4sf](.\images\image28.png) 
-![u4sf](.\images\image29.png) 
-![u4sf](.\images\image30.png) 
-![u4sf](.\images\image31.png) 
-![u4sf](.\images\image32.png) 
-![u4sf](.\images\image33.png)  
-![u4sf](.\images\image34.png) 
-![u4sf](.\images\image35.png) 
-![u4sf](.\images\image36.png) 
-![u4sf](.\images\image37.png) 
-![u4sf](.\images\image38.png) 
-![u4sf](.\images\image39.png) 
-![u4sf](.\images\image40.png) 
-![u4sf](.\images\image41.png) 
-![u4sf](.\images\image42.png) 
-![u4sf](.\images\image43.png) 
+- Go to `Authentication Settings for External Systems`. Edit `vu_nc` if it exists otherwise create New setting with the below information and click `Save`: 
+	
+	|                             Field | Value                         | 
+	|----------------------------------:|:------------------------------|
+	| External System Definition        | Named Credential              |
+	| Named Credential                  | vu_nc                         |
+	| User                              | Select current logged in user |
+	| Authentication Protocol           | OAuth 2.0                     |
+	| Authentication Provider           | UnityOAuth2Provider           |
+	| Start Authentication Flow on Save | checked                       |
+	
+	
+	![u4sf](.\images\image26.png) 
+	
+- Check that correct Unity application login dialog is opened and enter correct login and password
+	
+### Configure Unity tab in Salesforce 
+
+- Login to Salesforce 
+- Click `Setup`:  
+	
+	![u4sf](.\images\image10.png) 
+	
+- Go to `Tabs` and Click `New` on the Lightning Component Tabs: 
+	
+	![u4sf](.\images\image27.png) 
+	
+- Enter the information below to create the new tab and click `Save`: 
+	
+	|               Field | Value                                                                                                             | Example          |
+	|--------------------:|:------------------------------------------------------------------------------------------------------------------|:-----------------|
+	| Lightning Component | c:UnitySearchTemplatesTab (deployed package), Intellective2:UnitySearchTemplatesTab (installed package)           |                  |
+	| Tab Label           | Any unique Tab name that will be displayed in the Salesforce                                                      | Documents Search |
+	| Tab Name            | Should be matched with Tab Id that was configured in the Unity application. This ID can be used only for one Tab. | search_templates |
+	| Tab Style           | Select from the list                                                                                              | Lightning        |
+	
+	![u4sf](.\images\image28.png) 
+
+- Go to App Manager and click `Edit` for `Unity for Salesforce`: 
+
+	![u4sf](.\images\image29.png) 
+	
+- Click `Navigation Items` and select `Documents Search` tab as created above from Available Items and click `Save`: 
+	
+	![u4sf](.\images\image30.png) 
+	
+- Open Unity from the App Launcher: 
+
+	![u4sf](.\images\image24.png) 
+	
+### Configure reCAPTCHA (Optional) 
+
+- Add the following parameter to the SystemProperties section of Unity configuration file: 
+
+	```java
+	<Property ID="captcha.enabled" value="true"/> 
+	```
+
+- Login to [https://www.google.com/recaptcha/admin](https://www.google.com/recaptcha/admin) and register a new domain: 
+
+	![u4sf](.\images\image31.png) 
+	
+- Copy the generated keys and add them to `<Unity installed application>/vu.war/WEB-INF/lib/vu-auth-provider-<unity version>.jar/auth.properties` to the following properties: 
+
+	google.recaptcha.key.site = site key 
+	
+	google.recaptcha.key.secret = secret key 
+	
+	![u4sf](.\images\image32.png) 
+
+- In WebSphere admin console, go to `Security > SSL certificate and key management > Key stores and certificates > NodeDefaultTrustStore > Signer certificates`: 
+	
+	![u4sf](.\images\image33.png) 
+	
+- Click `Retrieve from port` button, and specify Hostname `google.com`, Port `443`, and Alias `google`: 
+	
+	![u4sf](.\images\image34.png) 
+	
+- Click `Retrieve signer information` button: 
+	
+	![u4sf](.\images\image35.png) 
+	
+- Press `Apply` and restart WebSphere 
+
+## Verify Installation of Unity for Salesforce
+	
+	![u4sf](.\images\image36.png) 
+	![u4sf](.\images\image37.png) 
+	![u4sf](.\images\image38.png) 
+	![u4sf](.\images\image39.png) 
+	![u4sf](.\images\image40.png) 
+	![u4sf](.\images\image41.png) 
+	![u4sf](.\images\image42.png) 
+	![u4sf](.\images\image43.png) 
 
 ## Contacts
 
