@@ -32,7 +32,7 @@
 
 ### UnityApp for Salesforce Checklist 
 
-Option 1
+Table Option 1
 
 |             Required Details             |                              Examples/Reference                                                                                                                  |
 |:----------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------:|
@@ -46,7 +46,7 @@ Option 1
 | Unity for Salesforce configuration guide |                                                                                                                                                                  |
 |                                          |                                                                                                                                                                  |
 
-Option 2
+Table Option 2
 
 |             Required Details             |                              Examples/Reference                                                                                                                  |
 |:----------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------:|
@@ -95,7 +95,7 @@ After certificate for a given Unity site is obtained it should be installed on a
 
 	![u4sf](.\images\image5.png) 
 	
-- Select Install for All Users and click `Install` button: 
+- Select `Install for All Users` and click `Install` button: 
 
 	![u4sf](.\images\image6.png) 
 	
@@ -219,7 +219,7 @@ After certificate for a given Unity site is obtained it should be installed on a
 
 	![u4sf](.\images\image25.png) 
 	
-- Go to `Authentication Settings for External Systems`. Edit `vu_nc` if it exists otherwise create New setting with the below information and click `Save`: 
+- Go to `Authentication Settings for External Systems`. Edit `vu_nc` if it exists otherwise create New setting with the information below and click `Save`: 
 	
 	|                             Field | Value                         | 
 	|----------------------------------:|:------------------------------|
