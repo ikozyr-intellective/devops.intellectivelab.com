@@ -295,7 +295,7 @@ After certificate for a given Unity site is obtained it should be installed on a
 	
 	![u4sf](.\images\image33.png) 
 	
-- Click `Retrieve from port` button, and specify Hostname `google.com`, Port `443`, and Alias `google`: 
+- Click `Retrieve from port` button, and specify Host `google.com`, Port `443`, and Alias `google`: 
 	
 	![u4sf](.\images\image34.png) 
 	
@@ -327,7 +327,7 @@ Unity validator is a great tool, that allows to test main Salesforce settings an
 ![u4sf](.\images\image44.png) 
 	
 In most cases error messages allow to understand what is wrong.
-How to add this tab:
+How to add Unity Validator tab:
 - Go to `Setup > Profiles` and click on profile name, e.g. System Administrator
 - In `Find Settings…` box type `Unity Validator`
 - Select found result (it belongs to Object Settings)
