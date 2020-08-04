@@ -16,11 +16,11 @@
 - [Configure Unity Tab in Salesforce](./unity-for-salesforce.html#configure-unity-tab-in-salesforce) 
 - [Configure reCAPTCHA (Optional)](./unity-for-salesforce.html#configure-recaptcha-optional)
 
-[Verify Installation Unity for Salesforce](./unity-for-salesforce.html#verify-installation-unity-for-salesforce) 
+[Verify Installation of Unity for Salesforce](./unity-for-salesforce.html#verify-installation-of-unity-for-salesforce) 
 - [Unity Validator](./unity-for-salesforce.html#unity-validator) 
 
-[Un-installing Unity for Salesforce](./unity-for-salesforce.html#un---installing-unity-for-salesforce) 
-- [Un-installing UnityApp package](./unity-for-salesforce.html#un---installing-unityapp-package) 
+[Un-installing Unity for Salesforce](./unity-for-salesforce.html#un-installing-unity-for-salesforce) 
+- [Un-install UnityApp package](./unity-for-salesforce.html#un-install-unityapp-package) 
 
 ## Planning Unity for Salesforce Installation
 
