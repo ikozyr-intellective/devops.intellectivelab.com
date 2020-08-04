@@ -17,6 +17,7 @@
 - [Configure reCAPTCHA (Optional)](./unity-for-salesforce.html#configure-recaptcha-optional)
 
 [Verify Installation Unity for Salesforce](./unity-for-salesforce.html#verify-installation-unity-for-salesforce) 
+- [Unity Validator](./unity-for-salesforce.html#unity-validator)
 [Un-installing Unity for Salesforce](./unity-for-salesforce.html#un---installing-unity-for-salesforce) 
 - [Un-install UnityApp package](./unity-for-salesforce.html#un---install-unityapp-package) 
 
@@ -304,14 +305,85 @@ After certificate for a given Unity site is obtained it should be installed on a
 - Press `Apply` and restart WebSphere 
 
 ## Verify Installation of Unity for Salesforce
+
+- Login to Salesforce
+- Open Unity from the App Launcher, if not already open: 
+	
+	![u4sf](.\images\image24.png) 
+	
+- `Documents Search` tab is displayed by default and the search is auto-executed to display the documents from FileNet CE: 
 	
 	![u4sf](.\images\image36.png) 
+	
+- Click on `View` action to view the document: 
+	
 	![u4sf](.\images\image37.png) 
+	
+### Unity Validator 
+
+Unity validator is a great tool, that allows to test main Salesforce settings and provides brief information on main possible reasons in case of problems:
+	
+![u4sf](.\images\image44.png) 
+	
+In most cases error messages allow to understand what is wrong.
+How to add this tab:
+- Go to `Setup > Profiles` and click on profile name, e.g. System Administrator
+- In `Find Settings…` box type `Unity Validator`
+- Select found result (it belongs to Object Settings)
+- Ensure that tab is not hidden, i.e. Tab settings set to `Default On` 
+		
+	![u4sf](.\images\image45.png) 
+	
+- If it’s hidden, click `Edit` button and change visibility. Click `Save`: 
+	
+	![u4sf](.\images\image46.png) 
+	
+- Go to `Setup > App Manager` 
+- Find `Unity for Salesforce Application` and click `Edit`: 
+	
+	![u4sf](.\images\image47.png) 
+	
+- Go to `Navigation Items`
+- Ensure that `Unity Validator` tab is presented under Selected Items: 
+
+	![u4sf](.\images\image48.png) 
+	
+- If it’s not there, select Unity Validator under Available Items and click arrow button between 2 lists
+- Click `Save` 
+
+## Un-installing Unity for Salesforce 
+
+### Un-install UnityApp package 
+
+- Login to Salesforce
+- Click Setup: 
+
+	![u4sf](.\images\image10.png) 
+	
+- Go to `Custom Code > Custom Metadata Types`. Find Unity OAuth settings and click `Manage Records`:
+	
 	![u4sf](.\images\image38.png) 
+	
+- Delete `UnityOAuth2Provider` by clicking on `Del` link: 
+	
 	![u4sf](.\images\image39.png) 
+	
+- Go to `Security > Named Credentials` and delete `vu_nc`: 
+	
 	![u4sf](.\images\image40.png) 
+	
+- Go to `Identity > Auth. Providers` and delete `UnityOAuth2Provider`: 
+	
 	![u4sf](.\images\image41.png) 
+	
+- Remove global components from all layouts where they were added
+- Remove other dependent components if there is any
+- Go to `Apps > Installed Packages` Uninstall UnityApp: 
+
 	![u4sf](.\images\image42.png) 
+	
+- Select options as shown on screenshot below and click `Uninstall`: 
+	
 	![u4sf](.\images\image43.png) 
 
 ## Contacts
