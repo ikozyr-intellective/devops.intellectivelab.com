@@ -7,7 +7,7 @@
 - [Search criteria panel](./unity-features-comparison-list.html#search-criteria-panel) 
 - [Properties View Form](./unity-features-comparison-list.html#properties-view-form) 
 - [Search Template](./unity-features-comparison-list.html#search-template) 
-- [Page/Tab](./unity-features-comparison-list.html#page/tab) 
+- [Page/Tab](./unity-features-comparison-list.html#pagetab) 
 - [Dashboard](./unity-features-comparison-list.html#dashboard) 
 - [Document Management](./unity-features-comparison-list.html#document-management) 
 - [Case Management](./unity-features-comparison-list.html#case-management) 
