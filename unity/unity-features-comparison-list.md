@@ -1,5 +1,20 @@
 # Unity Features Comparison List 
 
+## Contents 
+
+- [Design Principles](./unity-features-comparison-list.html#design-principles) 
+- [Grid](./unity-features-comparison-list.html#grid) 
+- [Search criteria panel](./unity-features-comparison-list.html#search-criteria-panel) 
+- [Properties View Form](./unity-features-comparison-list.html#properties-view-form) 
+- [Search Template](./unity-features-comparison-list.html#search-template) 
+- [Page/Tab](./unity-features-comparison-list.html#page/tab) 
+- [Dashboard](./unity-features-comparison-list.html#dashboard) 
+- [Document Management](./unity-features-comparison-list.html#document-management) 
+- [Case Management](./unity-features-comparison-list.html#case-management) 
+- [Process Management](./unity-features-comparison-list.html#process-management) 
+- [Auxiliary](./unity-features-comparison-list.html#auxiliary) 
+
+
 ## Design Principles 
 
 | Feature | Unity ExtJs | Unity React | Feature Details |
@@ -196,3 +211,55 @@
 | Document copy/move to folder        | + |   | [details](link to description of this feature)       |
 | Document delete       | + | + | [details](link to description of this feature)       |
 | Copy link        | + | + | [details](link to description of this feature)       |
+
+## Case Management 
+
+| Feature | Unity ExtJs | Unity React | Feature Details |
+|:--------------------|:-------------------:|:-------:|:-------:|
+|Create a case | + | + |  [details](link to description of this feature) |
+|Create a case with attachments | + | + |  [details](link to description of this feature) |
+|Case search and navigation | + | + |  [details](link to description of this feature) |
+|Case view and update properties | + | + |  [details](link to description of this feature) |
+|Case history | + | + |  [details](link to description of this feature) |
+|Case user comments (search, add, view, update, delete) | + | + |  [details](link to description of this feature) |
+|Case activity feed with infinite scrolling |   | + |  [details](link to description of this feature) |
+|Case events timeline with infinite scrolling |   | + |  [details](link to description of this feature) |
+|Case attachments with folder view (search, navigate, attach, detach) | + | + |  [details](link to description of this feature) |
+|Attach a local document to the case | + | + |  [details](link to description of this feature) |
+|Attach an existing document to the case | + | + |  [details](link to description of this feature) |
+|Case split  | + | + |  [details](link to description of this feature) |
+|Case copy | + | + |  [details](link to description of this feature) |
+|Case close | + | + |  [details](link to description of this feature) |
+|Case re-open | + | + |  [details](link to description of this feature) |
+|Case tasks view (search, create, view, complete, reassign) | + | + |  [details](link to description of this feature) |
+|Case work items view (search, view, process, complete, reassign) | + | + |  [details](link to description of this feature) |
+|Ability to show case related entities via virtual folders | + |   |  [details](link to description of this feature) |
+|Copy link | + | + |  [details](link to description of this feature) |
+
+## Process Management 
+
+| Feature | Unity ExtJs | Unity React | Feature Details |
+|:--------------------|:-------------------:|:-------:|:-------:|
+|Personal in-basket | + | + |  [details](link to description of this feature) |
+|Role in-basket | + | + |  [details](link to description of this feature) |
+|View information about the work item and information about the associated case  | + | + |  [details](link to description of this feature) |
+|Edit work item data, including case properties  | + | + |  [details](link to description of this feature) |
+|Manage case attachments  | + | + |  [details](link to description of this feature) |
+|View case history  | + | + |  [details](link to description of this feature) |
+|Process/Complete work item | + | + |  [details](link to description of this feature) |
+|Lock/Unlock work item | + | + |  [details](link to description of this feature) |
+|Reassign work item | + | + |  [details](link to description of this feature) |
+|Process analytics |   | + |  [details](link to description of this feature) |
+
+## Auxiliary 
+
+| Feature | Unity ExtJs | Unity React | Feature Details |
+|:--------------------|:-------------------:|:-------:|:-------:|
+|Unity API support |   | + |  [details](link to description of this feature) |
+|Help Authoring | + |   |  [details](link to description of this feature) |
+|System Notifications | + |  [U7-2661](https://jira.intellective.com/browse/U7-2661) |  [details](link to description of this feature) |
+|Localization | + |   |  [details](link to description of this feature) |
+|Choosing user role | + |   |  [details](link to description of this feature) |
+|Choosing preferred language | + |   |  [details](link to description of this feature) |
+|Choosing time zone | + |   |  [details](link to description of this feature) |
+|Choosing theme | + | + |  [details](link to description of this feature) |
