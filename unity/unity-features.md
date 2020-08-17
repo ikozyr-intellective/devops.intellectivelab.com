@@ -3,34 +3,34 @@
 ## Contents 
 
 [Unity Features Comparison List](./unity-features.html#unity-features-comparison-list)
-- [Design Principles](./unity-features.html#design-principles) 
+- [Design principles](./unity-features.html#design-principles) 
 - [Grid](./unity-features.html#grid) 
 - [Search criteria panel](./unity-features.html#search-criteria-panel) 
-- [Properties View Form](./unity-features.html#properties-view-form) 
-- [Search Template](./unity-features.html#search-template) 
+- [Properties view form](./unity-features.html#properties-view-form) 
+- [Search template](./unity-features.html#search-template) 
 - [Page/Tab](./unity-features.html#pagetab) 
 - [Dashboard](./unity-features.html#dashboard) 
-- [Document Management](./unity-features.html#document-management) 
-- [Case Management](./unity-features.html#case-management) 
-- [Process Management](./unity-features.html#process-management) 
+- [Document management](./unity-features.html#document-management) 
+- [Case management](./unity-features.html#case-management) 
+- [Process management](./unity-features.html#process-management) 
 - [Auxiliary](./unity-features.html#auxiliary) 
 
 [Unity Features List With Descriptions](./unity-features.html#unity-features-list-with-descriptions) 
-- [Design Principles Features](./unity-features.html#design-principles-features) 
-- [Grid Features](./unity-features.html#grid-features) 
-- [Search criteria panel Features](./unity-features.html#search-criteria-panel-features) 
-- [Properties View Form Features](./unity-features.html#properties-view-form-features) 
-- [Search Template Features](./unity-features.html#search-template-features) 
-- [Page/Tab Features](./unity-features.html#pagetab-features) 
-- [Dashboard Features](./unity-features.html#dashboard-features) 
-- [Document Management Features](./unity-features.html#document-management-features) 
-- [Case Management Features](./unity-features.html#case-management-features) 
-- [Process Management Features](./unity-features.html#process-management-features) 
-- [Auxiliary Features](./unity-features.html#auxiliary-features) 
+- [Design principles features](./unity-features.html#design-principles-features) 
+- [Grid features](./unity-features.html#grid-features) 
+- [Search criteria panel features](./unity-features.html#search-criteria-panel-features) 
+- [Properties view form features](./unity-features.html#properties-view-form-features) 
+- [Search template features](./unity-features.html#search-template-features) 
+- [Page/Tab features](./unity-features.html#pagetab-features) 
+- [Dashboard features](./unity-features.html#dashboard-features) 
+- [Document management features](./unity-features.html#document-management-features) 
+- [Case fanagement features](./unity-features.html#case-management-features) 
+- [Process management features](./unity-features.html#process-management-features) 
+- [Auxiliary features](./unity-features.html#auxiliary-features) 
 
 ## Unity Features Comparison List 
 
-### Design Principles 
+### Design principles 
 
 | Feature | Unity ExtJs | Unity React | Feature Details |
 |:--------------------|:-------------------:|:-------:|:-------:|
@@ -105,7 +105,7 @@
 |Responsive |   | + | [details](link to description of this feature) |
 |Ability to compose with other components |   | + | [details](link to description of this feature) |
 
-### Properties View Form  
+### Properties view form  
 
 | Feature | Unity ExtJs | Unity React | Feature Details |
 |:--------------------|:-------------------:|:-------:|:-------:|
@@ -146,7 +146,7 @@
 |Ability to compose with other components |   | + | [details](link to description of this feature) |
 |Responsive |   | + | [details](link to description of this feature) |
 
-### Search Template 
+### Search template 
 
 | Feature | Unity ExtJs | Unity React | Feature Details |
 |:--------------------|:-------------------:|:-------:|:-------:|
@@ -209,7 +209,7 @@
 |Data Export |   | + | [details](link to description of this feature) |
 
 
-### Document Management 
+### Document management 
 
 | Feature | Unity ExtJs | Unity React | Feature Details |
 |:--------------------|:-------------------:|:-------:|:-------:|
@@ -227,7 +227,7 @@
 | Document delete       | + | + | [details](link to description of this feature)       |
 | Copy link        | + | + | [details](link to description of this feature)       |
 
-### Case Management 
+### Case management 
 
 | Feature | Unity ExtJs | Unity React | Feature Details |
 |:--------------------|:-------------------:|:-------:|:-------:|
@@ -251,7 +251,7 @@
 |Ability to show case related entities via virtual folders | + |   |  [details](link to description of this feature) |
 |Copy link | + | + |  [details](link to description of this feature) |
 
-### Process Management 
+### Process management 
 
 | Feature | Unity ExtJs | Unity React | Feature Details |
 |:--------------------|:-------------------:|:-------:|:-------:|
@@ -281,7 +281,7 @@
 
 ## Unity Features List With Descriptions  
 
-### Design Principles Features 
+### Design principles features 
 
 #### MVVM 
 
@@ -315,24 +315,24 @@ Effectively responds to various screen sizes.
 
 
 
-### Grid Features 
+### Grid features 
 
-### Search criteria panel Features 
+### Search criteria panel features 
 
-### Properties View Form Features 
+### Properties view form features 
 
-### Search Template Features 
+### Search template features 
 
-### Page/Tab Features 
+### Page/Tab features 
 
-### Dashboard Features 
+### Dashboard features 
 
-### Document Management Features 
+### Document management features 
 
-### Case Management Features 
+### Case management features 
 
-### Process Management Features 
+### Process management features 
 
-### Auxiliary Features 
+### Auxiliary features 
 
 
