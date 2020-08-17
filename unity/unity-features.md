@@ -1,34 +1,49 @@
-# Unity Features Comparison List 
+# Unity Features 
 
 ## Contents 
 
-- [Design Principles](./unity-features-comparison-list.html#design-principles) 
-- [Grid](./unity-features-comparison-list.html#grid) 
-- [Search criteria panel](./unity-features-comparison-list.html#search-criteria-panel) 
-- [Properties View Form](./unity-features-comparison-list.html#properties-view-form) 
-- [Search Template](./unity-features-comparison-list.html#search-template) 
-- [Page/Tab](./unity-features-comparison-list.html#pagetab) 
-- [Dashboard](./unity-features-comparison-list.html#dashboard) 
-- [Document Management](./unity-features-comparison-list.html#document-management) 
-- [Case Management](./unity-features-comparison-list.html#case-management) 
-- [Process Management](./unity-features-comparison-list.html#process-management) 
-- [Auxiliary](./unity-features-comparison-list.html#auxiliary) 
+[Unity Features Comparison List](./unity-features.html#unity-features-comparison-list)
+- [Design Principles](./unity-features.html#design-principles) 
+- [Grid](./unity-features.html#grid) 
+- [Search criteria panel](./unity-features.html#search-criteria-panel) 
+- [Properties View Form](./unity-features.html#properties-view-form) 
+- [Search Template](./unity-features.html#search-template) 
+- [Page/Tab](./unity-features.html#pagetab) 
+- [Dashboard](./unity-features.html#dashboard) 
+- [Document Management](./unity-features.html#document-management) 
+- [Case Management](./unity-features.html#case-management) 
+- [Process Management](./unity-features.html#process-management) 
+- [Auxiliary](./unity-features.html#auxiliary) 
 
+[Unity Features List With Descriptions](./unity-features.html#unity-features-list-with-descriptions) 
+- [Design Principles Features](./unity-features.html#design-principles-features) 
+- [Grid Features](./unity-features.html#grid-features) 
+- [Search criteria panel Features](./unity-features.html#search-criteria-panel-features) 
+- [Properties View Form Features](./unity-features.html#properties-view-form-features) 
+- [Search Template Features](./unity-features.html#search-template-features) 
+- [Page/Tab Features](./unity-features.html#pagetab-features) 
+- [Dashboard Features](./unity-features.html#dashboard-features) 
+- [Document Management Features](./unity-features.html#document-management-features) 
+- [Case Management Features](./unity-features.html#case-management-features) 
+- [Process Management Features](./unity-features.html#process-management-features) 
+- [Auxiliary Features](./unity-features.html#auxiliary-features) 
 
-## Design Principles 
+## Unity Features Comparison List 
+
+### Design Principles 
 
 | Feature | Unity ExtJs | Unity React | Feature Details |
 |:--------------------|:-------------------:|:-------:|:-------:|
-|**MVVM** ensures clear responsibility segregation between business and presentation logic | + | + | [details](link to description of this feature) |
-|**Single responsibility** suggests creating a component that implements only one responsibility and has one reason to change | | + |[details](link to description of this feature) |
-|**Encapsulated component** hides its internal structure and implementation details, and defines props to control the behavior and output | | + |[details](link to description of this feature) |
-|**Composable component** is created from the composition of smaller specialized components | | + |[details](link to description of this feature) |
-|**Reusable component** is written once but used multiple times | | + |[details](link to description of this feature) |
-|**Pure component** always renders same elements for same prop values | | + |[details](link to description of this feature) |
-|**Responsive component** effectively responds to various screen sizes | | + |[details](link to description of this feature) |
-|**Modern Design System** | | + |[details](link to description of this feature) | 
+|**MVVM** ensures clear responsibility segregation between business and presentation logic | + | + | [details](./unity-features.html#mvvm) |
+|**Single responsibility** suggests creating a component that implements only one responsibility and has one reason to change | | + |[details](./unity-features.html#single-responsibility) |
+|**Encapsulated component** hides its internal structure and implementation details, and defines props to control the behavior and output | | + |[details](./unity-features.html#encapsulated-component) |
+|**Composable component** is created from the composition of smaller specialized components | | + |[details](./unity-features.html#composable-component) |
+|**Reusable component** is written once but used multiple times | | + |[details](./unity-features.html#reusable-component) |
+|**Pure component** always renders same elements for same prop values | | + |[details](./unity-features.html#pure-component) |
+|**Responsive component** effectively responds to various screen sizes | | + |[details](./unity-features.html#responsive-component) |
+|**Modern Design System** | | + |[details](./unity-features.html#modern-design-system) | 
 
-## Grid 
+### Grid 
 
 | Feature | Unity ExtJs | Unity React | Feature Details |
 |:--------------------|:-------------------:|:-------:|:-------:|
@@ -58,7 +73,7 @@
 |Responsive	|   | + | [details](link to description of this feature) |
 |Configurable | + | + | [details](link to description of this feature) |
 
-## Search criteria panel 
+### Search criteria panel 
 
 | Feature | Unity ExtJs | Unity React | Feature Details |
 |:--------------------|:-------------------:|:-------:|:-------:|
@@ -90,7 +105,7 @@
 |Responsive |   | + | [details](link to description of this feature) |
 |Ability to compose with other components |   | + | [details](link to description of this feature) |
 
-## Properties View Form  
+### Properties View Form  
 
 | Feature | Unity ExtJs | Unity React | Feature Details |
 |:--------------------|:-------------------:|:-------:|:-------:|
@@ -131,7 +146,7 @@
 |Ability to compose with other components |   | + | [details](link to description of this feature) |
 |Responsive |   | + | [details](link to description of this feature) |
 
-## Search Template 
+### Search Template 
 
 | Feature | Unity ExtJs | Unity React | Feature Details |
 |:--------------------|:-------------------:|:-------:|:-------:|
@@ -152,7 +167,7 @@
 |Responsive |   | + | [details](link to description of this feature) |
 |Ability to compose with other components |   | + | [details](link to description of this feature) |
 
-## Page/Tab 
+### Page/Tab 
 
 | Feature | Unity ExtJs | Unity React | Feature Details |
 |:--------------------|:-------------------:|:-------:|:-------:|
@@ -164,7 +179,7 @@
 |Ability to create a custom layout | + | + | [details](link to description of this feature) |
 |Ability to bundle components into containers (tabs) |   | + | [details](link to description of this feature) |
 
-## Dashboard 
+### Dashboard 
 
 | Feature | Unity ExtJs | Unity React | Feature Details |
 |:--------------------|:-------------------:|:-------:|:-------:|
@@ -194,7 +209,7 @@
 |Data Export |   | + | [details](link to description of this feature) |
 
 
-## Document Management 
+### Document Management 
 
 | Feature | Unity ExtJs | Unity React | Feature Details |
 |:--------------------|:-------------------:|:-------:|:-------:|
@@ -212,7 +227,7 @@
 | Document delete       | + | + | [details](link to description of this feature)       |
 | Copy link        | + | + | [details](link to description of this feature)       |
 
-## Case Management 
+### Case Management 
 
 | Feature | Unity ExtJs | Unity React | Feature Details |
 |:--------------------|:-------------------:|:-------:|:-------:|
@@ -236,7 +251,7 @@
 |Ability to show case related entities via virtual folders | + |   |  [details](link to description of this feature) |
 |Copy link | + | + |  [details](link to description of this feature) |
 
-## Process Management 
+### Process Management 
 
 | Feature | Unity ExtJs | Unity React | Feature Details |
 |:--------------------|:-------------------:|:-------:|:-------:|
@@ -251,7 +266,7 @@
 |Reassign work item | + | + |  [details](link to description of this feature) |
 |Process analytics |   | + |  [details](link to description of this feature) |
 
-## Auxiliary 
+### Auxiliary 
 
 | Feature | Unity ExtJs | Unity React | Feature Details |
 |:--------------------|:-------------------:|:-------:|:-------:|
@@ -263,3 +278,61 @@
 |Choosing preferred language | + |   |  [details](link to description of this feature) |
 |Choosing time zone | + |   |  [details](link to description of this feature) |
 |Choosing theme | + | + |  [details](link to description of this feature) |
+
+## Unity Features List With Descriptions  
+
+### Design Principles Features 
+
+#### MVVM 
+
+Ensures clear responsibility segregation between business and presentation logic.
+
+#### Single responsibility 
+
+Suggests creating a component that implements only one responsibility and has one reason to change. 
+
+#### Encapsulated component 
+
+Hides its internal structure and implementation details, and defines props to control the behavior and output. 
+
+#### Composable component 
+
+It is created from the composition of smaller specialized components. 
+
+#### Reusable component 
+
+It is written once but used multiple times.
+
+#### Pure component 
+
+Always renders same elements for same prop values.
+
+#### Responsive component 
+
+Effectively responds to various screen sizes. 
+
+#### Modern Design System 
+
+
+
+### Grid Features 
+
+### Search criteria panel Features 
+
+### Properties View Form Features 
+
+### Search Template Features 
+
+### Page/Tab Features 
+
+### Dashboard Features 
+
+### Document Management Features 
+
+### Case Management Features 
+
+### Process Management Features 
+
+### Auxiliary Features 
+
+
