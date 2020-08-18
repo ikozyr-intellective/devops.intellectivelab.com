@@ -387,6 +387,3 @@ How to add Unity Validator tab:
 	
 	![u4sf](.\images\image43.png) 
 
-## Contacts
-
-[Contact Intellective](https://www.intellective.com/contact-us/) 

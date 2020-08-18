@@ -1,33 +1,58 @@
 # DevOps Documentation Site
 
-## Quick Start
+## Unity 7 
 
-[Quick Start](./unity/quick-start.md) 
+- ### Overview 
 
-## Unity Overview 
-Unity is an integration framework that provides out of the box or low-code access to multiple repositories. It works on prem or in the cloud to connect applications to one or more ECM, BPM, and data repositories. It is a fast path to integration, supporting digital transformation, application modernization, and ECM/BPM migration. 
+- ### [Quick Start](./unity/quick-start.md)
 
-Unity solution connects your business application users with multiple repositories, workflows, and content systems. 
+- ### Installation 
+	- #### [Software Requirements](./unity/unity-software-requirements.md) 
+	- #### [Hardware Requirements](./unity/unity-hardware-requirements.md) 
 
-![unity-scheme](.\images\unity-scheme.png) 
+- ### Configuration 
+	- #### Look&Feel 
+	- #### [Features](./unity/unity-features.md) 
+	- #### Security 
+	- #### Connectors 
+	- #### Business Analytics 
+	- #### Business Rules 
+	- #### Office Integration 
 
-[Hardware Requirements](./unity/unity-hardware-requirements.md) 
+- ### Development 
+	- #### Environment Setup 
+	- #### Customization 
+	- #### API 
 
-[Software Requirements](./unity/unity-software-requirements.md) 
+- ### Tutorials 
+	- #### Unity 7 Customization Tutorial 
+	- #### [How To Install Docker](./unity/how-to-install-docker.md) 
 
-[Features](./unity/unity-features.md) 
+## Unity for CRM 
 
-[Unity for Salesforce](./unity-for-salesforce/unity-for-salesforce.md) 
+- ### [Unity for Salesforce](./unity-for-salesforce/unity-for-salesforce.md) 
+
+- ### Unity for Dynamics 
 	
 ## Enterprise Search 
 
-[Prerequisites](./enterprise-search/prerequisites.md) 
+- ### Overview 
 
-[Installing UIE](./enterprise-search/installing-uie.md) 
+- ### Installation 
 
-[Configure UIE for Use](./enterprise-search/configure-uie-for-use.md) 
+	- #### [Prerequisites](./enterprise-search/prerequisites.md) 
+	- #### [Installing UIE](./enterprise-search/installing-uie.md) 
 
-## Other 
+- ### Configuration 
+	- #### [Configure UIE for Use](./enterprise-search/configure-uie-for-use.md) 
+	- #### Security 
+
+- ### Development 
+	- #### Environment Setup 
+	- #### Customization 
+	- #### API 
+
+## Others 
 
 **Containers**
 

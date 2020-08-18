@@ -22,7 +22,7 @@
 	
 	![docker-settings-select](.\images\docker\how-to-install-docker-4.png) 
 	
-	Go to *Resources->File sharing*, select `C` drive and click Apply&Restart button 
+	Go to `Resources > File sharing`, select `C` drive and click `Apply&Restart` button 
 	
 	![docker-settings](.\images\docker\how-to-install-docker-5.png) 
 	

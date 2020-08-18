@@ -10,9 +10,9 @@ To try Unity demo version [install Docker](./how-to-install-docker.md) and confi
 
 [Unity Interface](./quick-start.html#unity-interface) 
 - [Tabs](./quick-start.html#tabs) 
-- [Search Layout](./quick-start.html#search-layout) 
-- [Case Management - Case View](./quick-start.html#case-management---case-view) 
-- [Case Management - Task View](./quick-start.html#case-management---task-view) 
+- [Search layout](./quick-start.html#search-layout) 
+- [Case management - Case view](./quick-start.html#case-management---case-view) 
+- [Case management - Task view](./quick-start.html#case-management---task-view) 
 
 ## Configure Unity Docker Image
  
@@ -51,7 +51,7 @@ Once downloaded, the local Unity instance will be up & running.
 Wizard should guide you through establishing connection to FileNet, use the [endpoint](http://172.31.27.3:9080/wsi/FNCEWS40MTOM/) to connect to Filenet. 
 Welcome to Unity! 
 	
-## Unity interface ## 
+## Unity Interface ## 
 
 ### Tabs ### 
 
@@ -64,7 +64,7 @@ Access roles can be used to provide different groups of users with specific set 
 
 ![Search layout](.\images\quick-start\image2.png) 
 
-### Search Layout ### 
+### Search layout ### 
 
 You will find on every search page: 
 
@@ -74,7 +74,7 @@ You will find on every search page:
 
 ![Actions](.\images\quick-start\image3.png) 
 
-### Case Management - Case View ###
+### Case management - Case view ###
 
 ![Case Views](.\images\quick-start\image4.png)
 
@@ -82,7 +82,7 @@ You will find on every search page:
 - Documents tab in case details shows all documents associated w/ case
 - History/Comments tab will display history & comments associated w/ case 
 
-### Case Management - Task View ### 
+### Case management - Task view ### 
 
 ![Case Views](.\images\quick-start\image5.png) 
 
@@ -90,6 +90,3 @@ You will find on every search page:
 - Documents tab shows all documents associated with a task
 - History/Comments tab will display history & comments associated with a task 
 
-## Contacts
-
-[Contact Intellective](https://www.intellective.com/contact-us/)
