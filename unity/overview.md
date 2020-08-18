@@ -14,7 +14,7 @@ Unity empowers users to seamlessly search for and manage documents, tasks, and d
 - Informed business decisions based on complete data from all your enterprise systems and applications 
 - Improved business KPIs via process automation and insights 
 
-## Unity Implements Quickly, Reduces Costs, and Improves Data Security:
+## Unity implements quickly, reduces costs, and improves data security
 
 - **Simple to use:** Enjoy a truly seamless experience within your ERP, CRM, and business applications 
 - **Quick to deploy:** Design UI and make it available in minutes 
@@ -22,5 +22,3 @@ Unity empowers users to seamlessly search for and manage documents, tasks, and d
 - **Reduces costs:** Access and transact on data and documents from the source 
 
 &rarr; [Next step: Quick Start](./quick-start.md) to install Unity demo and see how it works  
- 
-
