@@ -43,11 +43,11 @@ For additional information refer to [Docker for Windows](https://docs.docker.com
 	
 ## Troubleshooting 
 
-- When starting the Docker Desktop, got the error message saying user is not a part of a local group *docker-users* 
+- When starting the Docker Desktop, got the error message saying user is not a part of a local group `docker-users` 
 	
 	**Solution** 
 	
-	Add user to local group *docker-users* in terminal window:  
+	Add user to local group `docker-users` in terminal window:  
 
 	`net localgroup docker-users AzureAD\user@intellective.com /add` 
 
